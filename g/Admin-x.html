@@ -36,111 +36,114 @@
   </ul>
 </nav>
  <style>
- #menu {
-	background: #000000;
-	height: 51px;
-	border-radius: 11px;
-	border: 5px solid #FF0000;
-}
-#menu ul, #menu li {
-	margin: 0 auto;
-	padding: 0;
-	list-style: none
-}
-#menu ul {
-	width: 500px;
-	text-align: center;
-}
-#menu li {
-	display: inline-block;
-	position: relative;
-}
-#menu a {
-	display: block;
-	line-height: 42px;
-	padding: 0 14px;
-	text-decoration: none;
-	color: #FF0000;
-	font-size: 19px;
-}
-#menu a.dropdown-arrow:after {
-	content: "\25BE";
-	margin-left: 5px;
-	border-radius: 10px;
-}
-#menu li a:hover {
-	color: #000000;
-	background: #FF0000;
-	border-radius: 10px;
-}
-#menu input {
-	display: none;
-	margin: 0;
-	padding: 0;
-	height: 52px;
-	width: 100%;
-	opacity: 0;
-	cursor: pointer
-}
-#menu label {
-	display: none;
-	line-height: 42px;
-	text-align: center;
-	position: absolute;
-	left: 35px
-	border-radius: 10px;
-}
-#menu label:before {
-	font-size: 1.6em;
-	color: #FF0000;
-	content: "\2261";
-	margin-left: 20px;
-	border-radius: 10px;
-}
-#menu ul.sub-menus{
-	height: auto;
-	overflow: hidden;
-	width: 170px;
-	background: #000000;
-	position: absolute;
-	z-index: 99;
-	display: none;
-	border-radius: 10px;
-}
-#menu ul.sub-menus li {
-	display: block;
-	text-align: left;
-	width: 100%;
-border-radius: 10px;
-	
-}
-#menu ul.sub-menus a {
-	color: #FF0000;
-	font-size: 16px;
-	border-radius: 10px;
-}
-#menu li:hover ul.sub-menus {
-	display: block
+   #menu {
+     background: #000000;
+     height: 43px;
+     border-radius: 11px;
+     border: 5px solid #FF0000;
+     width:493px;
+   }
+   #menu ul, #menu li {
+     margin: 0 auto;
+     padding: 0;
+     list-style: none
+   }
+   #menu ul {
+     width: 100%;
+     text-align: left;
+   }
+   #menu li {
+     display: inline-block;
+     position: relative;
+   }
+   #menu a {
+     display: block;
+     line-height: 42px;
+     padding: 0 14px;
+     text-decoration: none;
+     color: #FF0000;
+     font-size: 19px;
+   }
+   #menu a.dropdown-arrow:after {
+     content: "\25BE";
+     margin-left: 5px;
+     border-radius: 10px;
+   }
+   #menu li a:hover {
+     color: #000000;
+     background: #FF0000;
+     border-radius: 10px;
+   }
+   #menu input {
+     display: none;
+     margin: 0;
+     padding: 0;
+     height: 52px;
+     width: 100%;
+     opacity: 0;
+     cursor: pointer
+   }
+   #menu label {
+     display: none;
+     line-height: 42px;
+     text-align: center;
+     position: absolute;
+     left: 35px
+     border-radius: 10px;
 
-}
-#menu ul.sub-menus a:hover{
-	background: #FF0000;
-	color: #000000;
-border-radius: 10px;
+   }
+   #menu label:before {
+     font-size: 1.6em;
+     color: #FF0000;
+     content: "\2261";
+     margin-left: 20px;
+     border-radius: 10px;
+     border:2px red;
+   }
+   #menu ul.sub-menus{
+     height: auto;
+     overflow: hidden;
+     width: 170px;
+     background: #000000;
+     position: absolute;
+     z-index: 99;
+     display: none;
+     border-radius: 10px;
+   }
+   #menu ul.sub-menus li {
+     display: block;
+     text-align: left;
+     width: 100%;
+   border-radius: 10px;
 
-}
-@media screen and (max-width: 800px){
-	#menu {position:relative}
-	#menu ul {background:#000000;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
-	#menu ul.sub-menus {width:100%;position:static;}
-	#menu ul.sub-menus a {padding-left:30px;}
-	#menu li {display:block;float:none;width:auto;}
-	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
-	#menu input {z-index:4}
-	#menu input:checked + label {color:#FF0000}
-	#menu input:checked + label:before {content:"\00d7"}
-	#menu input:checked ~ ul {display:block}
-}
+   }
+   #menu ul.sub-menus a {
+     color: #FF0000;
+     font-size: 16px;
+     border-radius: 10px;
+   }
+   #menu li:hover ul.sub-menus {
+     display: block
+
+   }
+   #menu ul.sub-menus a:hover{
+     background: #FF0000;
+     color: #000000;
+   border-radius: 10px;
+
+   }
+   @media screen and (max-width: 800px){
+     #menu {position:relative}
+     #menu ul {background:#000000;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+     #menu ul.sub-menus {width:100%;position:static;}
+     #menu ul.sub-menus a {padding-left:30px;}
+     #menu li {display:block;float:none;width:;}
+     #menu input, #menu label {position:absolute;top:0;left:0;display:block}
+     #menu input {z-index:4}
+     #menu input:checked + label {color:#FF0000}
+     #menu input:checked + label:before {content:"\00d7"}
+     #menu input:checked ~ ul {display:block}
+   }
 
  </style>
 <script>
