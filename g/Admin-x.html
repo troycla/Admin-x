@@ -1,172 +1,141 @@
+<!DOCTYPE html>
 <html>
-          <head>
+<head>
+  <title>Admin X | Game's</title>
+</head>
   
-    <title>
- Admin X | Main
-  </title>
- 
-   </head>
-   
-   <body bgcolor="black">
-  
- 
+<body bgcolor="black">
+<style>
+    img{
+     
+      border-radius:10px;
 
-  <nav id='menu'>
-  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-  <ul>
-    <li><a href='http://'>Home</a></li>
-    <li><a class='dropdown-arrow' href='http://'>testing</a>
-      <ul class='sub-menus'>
-        <li><a onclick="win()">open in window</a></li>
-        <li><a href='http://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-      </ul>
-    </li>
-   <li><a href='utilities.html'>App's</a></li>
-    <li><a href='games.html'>Game's</a></li>
-    <li><a class='dropdown-arrow' href='http://'>other</a>
-      <ul class='sub-menus'>
-        <li><a href='https://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-      </ul>
-    </li>
+    }
 
-  </ul>
-</nav>
- <style>
-   #menu {
-     background: #000000;
-     height: 43px;
-     border-radius: 11px;
-     border: 5px solid #FF0000;
-     width:493px;
-   }
-   #menu ul, #menu li {
-     margin: 0 auto;
-     padding: 0;
-     list-style: none
-   }
-   #menu ul {
-     width: 100%;
-     text-align: left;
-   }
-   #menu li {
-     display: inline-block;
-     position: relative;
-   }
-   #menu a {
-     display: block;
-     line-height: 42px;
-     padding: 0 14px;
-     text-decoration: none;
-     color: #FF0000;
-     font-size: 19px;
-   }
-   #menu a.dropdown-arrow:after {
-     content: "\25BE";
-     margin-left: 5px;
-     border-radius: 10px;
-   }
-   #menu li a:hover {
-     color: #000000;
-     background: #FF0000;
-     border-radius: 10px;
-   }
-   #menu input {
-     display: none;
-     margin: 0;
-     padding: 0;
-     height: 52px;
-     width: 100%;
-     opacity: 0;
-     cursor: pointer
-   }
-   #menu label {
-     display: none;
-     line-height: 42px;
-     text-align: center;
-     position: absolute;
-     left: 35px
-     border-radius: 10px;
-
-   }
-   #menu label:before {
-     font-size: 1.6em;
-     color: #FF0000;
-     content: "\2261";
-     margin-left: 20px;
-     border-radius: 10px;
-     border:2px red;
-   }
-   #menu ul.sub-menus{
-     height: auto;
-     overflow: hidden;
-     width: 170px;
-     background: #000000;
-     position: absolute;
-     z-index: 99;
-     display: none;
-     border-radius: 10px;
-   }
-   #menu ul.sub-menus li {
-     display: block;
-     text-align: left;
-     width: 100%;
-   border-radius: 10px;
-
-   }
-   #menu ul.sub-menus a {
-     color: #FF0000;
-     font-size: 16px;
-     border-radius: 10px;
-   }
-   #menu li:hover ul.sub-menus {
-     display: block
-
-   }
-   #menu ul.sub-menus a:hover{
-     background: #FF0000;
-     color: #000000;
-   border-radius: 10px;
-
-   }
-   @media screen and (max-width: 800px){
-     #menu {position:relative}
-     #menu ul {background:#000000;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
-     #menu ul.sub-menus {width:100%;position:static;}
-     #menu ul.sub-menus a {padding-left:30px;}
-     #menu li {display:block;float:none;width:;}
-     #menu input, #menu label {position:absolute;top:0;left:0;display:block}
-     #menu input {z-index:4}
-     #menu input:checked + label {color:#FF0000}
-     #menu input:checked + label:before {content:"\00d7"}
-     #menu input:checked ~ ul {display:block}
-   }
-
- </style>
-<script>
-  function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '10px';
-  }
+.div1{
+  border: 3px solid red;
+  border-radius: 10px;
+  width:180px;
+  height:120px;
 }
 
-</script>
+    .search-container {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .search-container input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 3px solid red;
+      font-size: 16px;
+      background: black;
+      color: red;
+    }
 
-<script>function win(){
-        window.open("load.html", "_blank", "toolbar=yes,scrollbars=yes, fullscreen=yes,resizable=yes,top=500,left=500,width=400,height=400");
-}    
-</script>
-	   
-
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .content-item {
+      margin: 5px;
+    }
+    .content-item button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      color: red;
+      background-color: black;
+      border: 3px solid red;
+    }
+       .content-item:hover button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      color: black;
+      background-color: red;
+      border: 3px solid red;
+    }
     
-<script src="js/dev-console.js"></script>
+  </style>
+  <div class="search-container">
+    <input class="shb." type="text" id="searchBar" placeholder="Search..." onkeyup="searchPage()">
+  </div>
+  
+  <div id="content">
+<div class="content-item" data-category="category1"><button onclick="min()"><div class="div1"><img src='img/mine.jpeg'></div><br>Minecraft</button></div>
+<div class="content-item" data-category="category2"><button onclick="flappy()"><div class="div1"><img src='img/flappy.jpeg'></div><br>Flappy bird</button></div>
+<div class="content-item" data-category="category3"><button onclick="retro()"><div class="div1"><img src='img/retro.png'></div><br>Retro bowl</button></div>
+<div class="content-item" data-category="category4"><button onclick="drag()"><div class="div1"><img src='img/dragv3.jpeg'></div><br>Drag race v3</button></div>
+<div class="content-item" data-category="category5"><button onclick="check()"><div class="div1"><img src='img/checkers.jpeg'></div><br>Checkers</button></div>
+<div class="content-item" data-category="category6"><button onclick="tetris()"><div class="div1"><img src='img/tetris.jpeg'></div><br>Tetris</button></div>
+<div class="content-item" data-category="category7"><button onclick="itn()"><div class="div1"><img src='img/buddy.jpeg'></div><br>Interactive buddy</button></div>
+<div class="content-item" data-category="category8"><button onclick="portal()"><div class="div1"><img src='img/portal.jpeg'></div><br>Portal</button></div>
+<div class="content-item" data-category="category9"><button onclick="pacin()"><div class="div1"><img src='img/pacin.png'></div><br>Pacman</button></div>
+<div class="content-item" data-category="category10"><button onclick="duck1()"><div class="div1"><img src='img/duck.jpeg'></div><br>Duck life</button></div>
+<div class="content-item" data-category="category11"><button onclick="duck2()"><div class="div1"><img src='img/duck2.jpeg'></div><br>Duck Life 2</button></div>
+<div class="content-item" data-category="category12"><button onclick="duck3()"><div class="div1"><img src='img/duck3.jpeg'></div><br>Duck Life 3</button></div>
+<div class="content-item" data-category="category13"><button onclick="duck4()"><div class="div1"><img src='img/duck4.jpeg'></div><br>Duck Life 4</button></div>
+<div class="content-item" data-category="category14"><button onclick="cookies()"><div class="div1"><img src='img/cookie.jpeg'></div><br>Cookie Clicker</button></div>
+<div class="content-item" data-category="category15"><button onclick="bitcoin()"><div class="div1"><img src='img/bitcoin.png'></div><br>Idle Bit Coin</button></div>
+<div class="content-item" data-category="category16"><button onclick="tiq()"><div class="div1"><img src='img/impose.png'></div><br>The Impossible Quiz</button></div>
+<div class="content-item" data-category="category17"><button onclick="dj()"><div class="div1"><img src='img/doddle.jpeg'></div><br>Doodle Jump</button></div>
+<div class="content-item" data-category="category18"><button onclick="happywheel()"><div class="div1"><img src='img/wheels.jpeg'></div><br>Happy Wheel's</button></div>
+<div class="content-item" data-category="category19"><button onclick="pclicker()"><div class="div1"><img src='img/pc.jpeg'></div><br>Particle Clicker</button></div>
+<div class="content-item" data-category="category20"><button onclick="ib()"><div class="div1"><img src='img/ib.png'></div><br>Idle Break Out</button></div>
+<div class="content-item" data-category="category21"><button onclick="p2()"><div class="div1"><img src='img/io2.jpeg'></div><br>Paper.io 2</button></div>
+<div class="content-item" data-category="category22"><button onclick="sh()"><div class="div1"><img src='img/superhot.jpeg'></div><br>Super Hot</button></div>
+<div class="content-item" data-category="category23"><button onclick="bs()"><div class="div1"><img src='img/bs.jpeg'></div><br>Basket Ball Star's</button></div>
+<div class="content-item" data-category="category24"><button onclick="geo()"><div class="div1"><img src='img/geo.jpeg'></div><br>Geo Dash</button></div>
+<div class="content-item" data-category="category25"><button onclick="slope()"><div class="div1"><img src='img/slope.png'></div><br>Slope</button></div>
+<div class="content-item" data-category="category26"><button onclick="rs()"><div class="div1"><img src='img/roofe.jpeg'></div><br>Rooftop Snipers</button></div>
+<div class="content-item" data-category="category27"><button onclick="sk()"><div class="div1"><img src='img/smash.jpeg'></div><br>Smash Kart</button></div>
+<div class="content-item" data-category="category28"><button onclick="lol()"><div class="div1"><img src='img/1v1.jpeg'></div><br>1v1.lol</button></div>
+<div class="content-item" data-category="category29"><button onclick="sm64()"><div class="div1"><img src='img/64.jpeg'></div><br>Super Mario 64</button></div>
+<div class="content-item" data-category="category30"><button onclick="tr()"><div class="div1"><img src='img/tunnel.jpeg'></div><br>Tunnel Rush</button></div>
+<div class="content-item" data-category="category31"><button onclick="bl()"><div class="div1"><img src='img/bitlife.jpeg'></div><br>Bit Life</button></div>
+<div class="content-item" data-category="category32"><button onclick="bb()"><div class="div1"><img src='img/bb1.jpeg'></div><br>Basket Bros</button></div>
+<div class="content-item" data-category="category33"><button onclick="dh()"><div class="div1"><img src='img/drift2.jpeg'></div><br>Drift Hunters</button></div>
+<div class="content-item" data-category="category34"><button onclick="cr()"><div class="div1"><img src='img/ctr.png'></div><br>Cross The Road</button></div>
+<div class="content-item" data-category="category35"><button onclick="perc()"><div class="div1"><img src='img/pc12.jpeg'></div><br>Perfect Circle</button></div>
+<div class="content-item" data-category="category36"><button onclick="fn()"><div class="div1"><img src='img/frying1.jpeg'></div><br>Frying Nemo</button></div>
+<div class="content-item" data-category="category37"><button onclick="ss()"><div class="div1"><img src='img/subs.jpeg'></div><br>Subway Surfers</button></div>
+<div class="content-item" data-category="category38"><button onclick="msc2()"><div class="div1"><img src='img/msc2.jpeg'></div><br>Madalin Stunt Cars 2</button></div>
+<div class="content-item" data-category="category39"><button onclick="msc3()"><div class="div1"><img src='img/msc3.jpeg'></div><br>Madalin Stunt Cars 3</button></div>
+<div class="content-item" data-category="category40"><button onclick="raze1()"><div class="div1"><img src='img/raze1.jpeg'></div><br>Raze 1</button></div>
+<div class="content-item" data-category="category41"><button onclick="raze2()"><div class="div1"><img src='img/raze2.jpeg'></div><br>Raze 2</button></div>
+<div class="content-item" data-category="category42"><button onclick="raze3()"><div class="div1"><img src='img/raze3.jpeg'></div><br>Raze 3</button></div>
+<div class="content-item" data-category="category43"><button onclick="cr2()"><div class="div1"><img src='img/cluster.jpeg'></div><br>Cluster Rush</button></div>
+<div class="content-item" data-category="category44"><button onclick="scrapm()"><div class="div1"><img src='img/scrap.jpeg'></div><br>Scrap Metal</button></div>
+<div class="content-item" data-category="category45"><button onclick="warfare1917()"><div class="div1"><img src='img/w1.jpeg'></div><br>Warfare 1917</button></div>
+<div class="content-item" data-category="category46"><button onclick="warfare1944()"><div class="div1"><img src='img/w2.jpeg'></div><br>Warfare 1944</button></div>
+<div class="content-item" data-category="category47"><button onclick="run2()"><div class="div1"><img src='img/r2.jpeg'></div><br>Run 2</button></div>
+<div class="content-item" data-category="category48"><button onclick="agc()"><div class="div1"><img src='img/agc.jpeg'></div><br>Age of Conflict</button></div>
+<div class="content-item" data-category="category49"><button onclick="dice()"><div class="div1"><img src='img/dice.jpeg'></div><br>Idle Dice</button></div>
+<div class="content-item" data-category="category50"><button onclick="evo()"><div class="div1"><img src='img/evo.png'></div><br>Evolution</button></div>
+<div class="content-item" data-category="category51"><button onclick="achl()"><div class="div1"><img src='img/achl.png'></div><br>Little Alchemy</button></div>
+<div class="content-item" data-category="category52"><button onclick="thecube()"><div class="div1"><img src='img/thecube.png'></div><br>The Cube</button></div>
+<div class="content-item" data-category="category53"><button onclick="mrmine()"><div class="div1"><img src='img/mrmine.jpeg'></div><br>Mr.Mine</button></div>
+<div class="content-item" data-category="category54"><button onclick="onone()"><div class="div1"><img src='img/1on1.jpeg'></div><br>1on1 Soccer</button></div>
+<div class="content-item" data-category="category55"><button onclick="fruit()"><div class="div1"><img src='img/fruit.jpg'></div><br>Fruit Ninja</button></div>
+<div class="content-item" data-category="category56"><button onclick="burrito()"><div class="div1"><img src='img/burrito.jpeg'></div><br>Burrito Bison</button></div>
+<div class="content-item" data-category="category57"><button onclick="moto()"><div class="div1"><img src='img/moto.jpg'></div><br>Motox 3m</button></div>
+<div class="content-item" data-category="category58"><button onclick="jack()"><div class="div1"><img src='img/jack.jpeg'></div><br>Jack Smith</button></div>
+<div class="content-item" data-category="category59"><button onclick="riddleone()"><div class="div1"><img src='img/riddle1.jpeg'></div><br>Riddle School 1</button></div>
+<div class="content-item" data-category="category60"><button onclick="riddletwo()"><div class="div1"><img src='img/riddle2.jpeg'></div><br>Riddle School 2</button></div>
+<div class="content-item" data-category="category61"><button onclick="riddlethree()"><div class="div1"><img src='img/riddle3.jpeg'></div><br>Riddle School 3</button></div>
+<div class="content-item" data-category="category62"><button onclick="riddlefour()"><div class="div1"><img src='img/riddle4.jpeg'></div><br>Riddle School 4</button></div>
+<div class="content-item" data-category="category63"><button onclick="riddlefive()"><div class="div1"><img src='img/riddle5.jpeg'></div><br>Riddle School 5</button></div>
+<div class="content-item" data-category="category64"><button onclick="riddletran()"><div class="div1"><img src='img/riddletran.jpeg'></div><br>Riddle Transfer 1 </button></div>
+<div class="content-item" data-category="category65"><button onclick="riddletran2()"><div class="div1"><img src='img/riddletran2.jpeg'></div><br>Riddle Transfer 2</button></div>
 
-  </body>
+  </div>
+  <script src="js/search.js"></script>
+<script src="js/game.js" ></script>
+<script>
+  sort()
+</script>
 
+</body>
 </html>
