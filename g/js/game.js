@@ -1,4 +1,3 @@
-
  function min() {
     window.location.href = ('Minecraft.html');
   }
@@ -223,8 +222,33 @@ function burrito() {
   window.location.href = ('game-a/burrito/index.html');
 }
 function moto() {
-  window.location.href = ('game-a/motox3m/index.html');
+  window.location.href = ('game-a/moto3xm/index.html');
 }
-function jack() {
+function jack(){
   window.location.href = ('jacks.html');
+}
+function riddleone()
+{
+  window.location.href = ('riddle-school.html');
+}
+function riddletwo()
+{
+  window.location.href = ('riddleschool2.html');
+}
+function riddlethree()
+{
+  window.location.href = ('riddleschool3.html');
+}
+function riddlefour()
+{
+  window.location.href = ('riddleschool4.html');
+}
+function riddlefive(){
+  window.location.href = ('riddleschool5.html');
+}
+function riddletran(){
+  window.location.href = ('riddletransfer.html');
+}
+function riddletran2(){
+  window.location.href = ('riddletransfer2.html');
 }
