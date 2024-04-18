@@ -222,7 +222,7 @@ function burrito() {
   window.location.href = ('game-a/burrito/index.html');
 }
 function moto() {
-  window.location.href = ('game-a/moto3xm/index.html');
+  window.location.href = ('game-a/motox3m/index.html');
 }
 function jack(){
   window.location.href = ('jacks.html');
