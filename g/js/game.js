@@ -183,21 +183,21 @@
        window.location.href = ('warfare1944.html');
      }
 
-     function run2(){
-       window.location.href = ('run2.html');
-     }
-
-     function agc(){
-       window.location.href = ('game-a/a-g-c/index.html');
-     }
+function run2(){
+ window.location.href = ('run2.html');
+}
+     
+function agc(){
+   window.location.href = ('game-a/a-g-c/index.html');
+}
  
-    function dice(){
-       window.location.href = ('game-a/i-dice/index.html');
-     }
- 
- function evo(){
-       window.location.href = ('game-a/evo/index.html');
-     }
+function dice(){
+window.location.href = ('game-a/i-dice/index.html');
+}
+     
+function evo(){
+window.location.href = ('game-a/evo/index.html');
+}
  
 function achl() {
   window.location.href = ('game-a/li-a/index.html');
@@ -251,4 +251,10 @@ function riddletran(){
 }
 function riddletran2(){
   window.location.href = ('riddletransfer2.html');
+}
+function raft1(){
+  window.location.href = ('raft1.html');
+}
+function raft2(){
+  window.location.href = ('raft2.html');
 }
