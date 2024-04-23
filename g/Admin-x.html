@@ -14,7 +14,7 @@
   <nav id='menu'>
   <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
   <ul>
-    <li><a href='adsproxy.html'>Proxy</a></li>
+    <li><a onclick="proxy()">Proxy</a></li>
     <li><a class='dropdown-arrow' href='http://'>testing</a>
       <ul class='sub-menus'>
         <li><a onclick="win()">open in window</a></li>
@@ -165,7 +165,11 @@
 }
 
 </script>
-
+<script>
+          function proxy(){
+        window.open("https://pool-funny-city.glitch.me/", "_blank", "toolbar=yes,scrollbars=yes, fullscreen=yes,resizable=yes,top=500,left=500,width=400,height=400");
+}
+</script>
 <script>function win(){
         window.open("Admin-x.html", "_blank", "toolbar=yes,scrollbars=yes, fullscreen=yes,resizable=yes,top=500,left=500,width=400,height=400");
 }
