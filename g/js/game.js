@@ -258,3 +258,21 @@ function raft1(){
 function raft2(){
   window.location.href = ('raft2.html');
 }
+function bloon1(){
+  window.location.href = ('bloon1.html');
+}
+function bloon2(){
+  window.location.href =('bloon2.html');
+}
+function bloon3(){
+  window.location.href = ('bloon3.html');
+}
+function gun1(){
+  window.location.href = ('gun1.html');
+}
+function gun2(){
+  window.location.href = ('gun2.html');
+}
+function gun3(){
+  window.location.href = ('gun3.html');
+}
