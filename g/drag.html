@@ -5,11 +5,26 @@
 </title>
 </head>
   <body bgcolor='black'>
+    <style>
+      #fps {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font: bold;
+        font-size: 20px;
+        color:red;
+        background-color: black;
+        padding: 5px 10px;
+        border:4px solid red;
+        border-radius: 5px;
+    }
+    </style>
+    <script src="js/fps.js"></script>
   <script>
        alert("you will have to wait a little bit");
   </script>
   
-  
+  <div id="fps">FPS: <span id="fpsCount">0</span></div>
 <object>
         <embed height="100%"  src="https://raw.githubusercontent.com/troycla/drag-racing-v3-flash-emulor-ruffle/main/dragracing.swf" width="100%"></embed>
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script><script src="js/dev-console.js"></script>
