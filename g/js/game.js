@@ -250,7 +250,7 @@ function riddletran(){
   window.location.href = ('riddletransfer.html');
 }
 function riddletran2(){
-  window.location.href = ('riddletransfer2.html');
+  window.location.href = ('riddletranfer2.html');
 }
 function raft1(){
   window.location.href = ('raft1.html');
