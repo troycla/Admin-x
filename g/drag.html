@@ -3,6 +3,7 @@
 <title>
   Admin X | Drag race v3
 </title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
   <body bgcolor='black'>
     <style>
@@ -18,16 +19,50 @@
         border:4px solid red;
         border-radius: 5px;
     }
+    .embed{
+      border:3px solid red;
+      border-radius:5px;
+    }
+    embed{
+      border-radius:5px;
+    }
+    button{
+       background:black;
+       border:3px solid red;
+       border-radius:6px;
+    
+       
+   
+    }
+    font{
+      visibility:hidden;
+    }
+
     </style>
     <script src="js/fps.js"></script>
-  <script>
-       alert("you will have to wait a little bit");
-  </script>
   
-  <div id="fps">FPS: <span id="fpsCount">0</span></div>
+  <script>
+       function tf() {
+            var embed = document.getElementById('embeddedHTML');
+            if (!document.fullscreenElement) {
+                embed.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+</script>
+  <div id="fps">FPS: <span id="fpsCount">0</span></div><br><br><br>
 <object>
-        <embed height="100%"  src="https://raw.githubusercontent.com/troycla/drag-racing-v3-flash-emulor-ruffle/main/dragracing.swf" width="100%"></embed>
+        <embed id="embeddedHTML"  class="embed" src="https://raw.githubusercontent.com/troycla/drag-racing-v3-flash-emulor-ruffle/main/dragracing.swf"></embed>
+         
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script><script src="js/dev-console.js"></script>
-</object>
+</object><br><br><li><font>
+|---------------------------------------------------------------------------------------------|
+</font>
+<i onclick="tf()" class="material-icons" style=" border:3px solid red;border-radius:5px;font-size:24px;color:red;" >fullscreen</i></li>
 </body>
 </html>
+
+
