@@ -276,3 +276,17 @@ function gun2(){
 function gun3(){
   window.location.href = ('gun3.html');
 }
+function worlds1(){
+  window.location.href = ('worlds1.html');
+}
+function worlds2(){
+  window.location.href = ('worlds2.html');
+}
+function worlds3(){
+  window.location.href = ('worlds3.html');
+}
+function worlds4(){
+  window.location.href = ('worlds4.html');
+}
+  
+ 
