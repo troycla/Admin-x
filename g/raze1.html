@@ -1,10 +1,87 @@
-<html>
-  <head><title>Admin X | Raze </title></head>
-  <body bgcolor="black">
-    <object>
-        <embed src="https://raw.githubusercontent.com/troycla/Flash-a/main/raze.swf" width="100%" height="100%" />
-    </object>
 
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<html>
+<head>
+<title>
+  Admin X | Raze
+</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+  <body bgcolor='black'>
+    <style>
+      #fps {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font: bold;
+        font-size: 20px;
+        color:red;
+        background-color: black;
+        padding: 5px 10px;
+        border:4px solid red;
+        border-radius: 5px;
+    }
+    .embed{
+      border:3px solid red;
+      border-radius:5px;
+    }
+    embed{
+      border-radius:5px;
+    }
+    button{
+       background:black;
+       border:3px solid red;
+       border-radius:6px;
+
+
+
+    }
+    font{
+      visibility:hidden;
+    }
+
+    </style>
+    <script>
+         var lastCalledTime;
+    var fps;
+
+    function updateFPS() {
+        if (!lastCalledTime) {
+            lastCalledTime = Date.now();
+            fps = 0;
+            return;
+        }
+        var delta = (Date.now() - lastCalledTime) / 1000;
+        lastCalledTime = Date.now();
+        fps = 1 / delta;
+
+        document.getElementById('fpsCount').textContent = fps.toFixed(1);
+        requestAnimationFrame(updateFPS);
+    }
+
+    updateFPS();
+    </script>
+
+  <script>
+       function tf() {
+            var embed = document.getElementById('embeddedHTML');
+            if (!document.fullscreenElement) {
+                embed.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+</script>
+  <div id="fps">FPS: <span id="fpsCount">0</span></div><br><br><br>
+<object>
+        <embed id="embeddedHTML"  class="embed" src="https://raw.githubusercontent.com/troycla/Flash-a/main/raze.swf"></embed>
+
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script><script src="js/dev-console.js"></script>
+</object><br><br><li><font>
+|---------------------------------------------------------------------------------------------|
+</font>
+<i onclick="tf()" class="material-icons" style=" border:3px solid red;border-radius:5px;font-size:24px;color:red;" >fullscreen</i></li>
 </body>
 </html>
+
