@@ -1,55 +1,81 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Admin X | loading</title>
+  <title>Admin-x | Login Page</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: black;
     }
-    
-     
-    #loading {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 50px;
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: black;
+      border:2px solid red;
+      
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container h2 {
+      text-align: center;
       color: red;
-      opacity: 0;
-      animation: fadeTextGlow 5s linear infinite;
-      text-shadow: 0 0 10px red;
     }
-    
-    @keyframes fadeTextGlow {
-      0% {
-        opacity: 0;
-        text-shadow: 0 0 10px red;
-      }
-      50% {
-        opacity: 1;
-        text-shadow: 0 0 20px red;
-      }
-      100% {
-        opacity: 0;
-        text-shadow: 0 0 10px red;
-      }
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      background:black;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      color:red;
+      border: 1px solid red;
+      box-sizing: border-box;
+    }
+    .container button {
+      background-color: black;
+      color: red;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: 2px solid red;
+      
+      cursor: pointer;
+      width: 100%;
+    }
+    .container button:hover {
+      opacity: 0.8;
     }
   </style>
-  <script>
-    setTimeout(function() {
-      window.location.href = 'g/Admin-x.html';
-    }, 10000);
+  <script src="">
   </script>
-</head>
-<body bgcolor="black">
+     <script>
+      function getRandomLink() {
+        var links = [
+          "https://lootdest.com/s?CjGL",
+        ];
 
-  
-  <div id="loading">Loading...</div>
+        // Generate a random index
+        var randomIndex = Math.floor(Math.random() * links.length);
+
+        // Retrieve the random link
+        var randomLink = links[randomIndex];
+
+        // Redirect to the random link
+        window.location.href = randomLink;
+      }
+    </script>
+</head>
+<body>
+  <div class="container">
+ 
+    <form onsubmit="return validateLogin()">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+   <button class=".container button" onclick="getRandomLink()">username and pass here</button>
 </body>
 </html>
