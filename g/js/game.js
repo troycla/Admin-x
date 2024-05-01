@@ -1,4 +1,4 @@
-qweqsc 2121 regrfbte ndvu5rk3w74yq3twgev function min() {
+function min() {
     window.location.href = ('Minecraft.html');
   }
  
