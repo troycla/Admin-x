@@ -288,5 +288,7 @@ function worlds3(){
 function worlds4(){
   window.location.href = ('worlds4.html');
 }
-  
+function forms(){
+  window.location.href = ('https://forms.gle/69mK2AGJUmHXbNC88');
+}  
  
