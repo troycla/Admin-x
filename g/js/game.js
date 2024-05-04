@@ -291,4 +291,10 @@ function worlds4(){
 function forms(){
   window.location.href = ('https://forms.gle/69mK2AGJUmHXbNC88');
 }  
- 
+function road1(){
+    window.location.href = ('road1.html');
+} 
+
+function road2(){
+    window.location.href = ('road2.html');
+} 
