@@ -288,9 +288,6 @@ function worlds3(){
 function worlds4(){
   window.location.href = ('worlds4.html');
 }
-function forms(){
-  window.open('https://docs.google.com/forms/d/e/1FAIpQLScgZ6nKG0tCnMK8xZvUJYWcsobno0VrXAb8_UA_05XmoBbx2Q/viewform?usp=sf_link');
-}  
 function road1(){
     window.location.href = ('road1.html');
 } 
@@ -298,3 +295,6 @@ function road1(){
 function road2(){
     window.location.href = ('road2.html');
 } 
+function forms(){
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLScgZ6nKG0tCnMK8xZvUJYWcsobno0VrXAb8_UA_05XmoBbx2Q/viewform?usp=sf_link');
+}  
