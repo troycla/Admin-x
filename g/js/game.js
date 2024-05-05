@@ -1,5 +1,5 @@
 function forms(){
-  window.open('forms.html');
+  window.location.href = ('forms.html');
 }  
 function min() {
     window.location.href = ('Minecraft.html');
