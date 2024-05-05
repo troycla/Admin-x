@@ -1,5 +1,5 @@
 function forms(){
-  window.open('https://docs.google.com/forms/d/e/1FAIpQLScgZ6nKG0tCnMK8xZvUJYWcsobno0VrXAb8_UA_05XmoBbx2Q/viewform?usp=sf_link');
+  window.open('forms.html');
 }  
 function min() {
     window.location.href = ('Minecraft.html');
