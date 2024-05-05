@@ -289,7 +289,7 @@ function worlds4(){
   window.location.href = ('worlds4.html');
 }
 function forms(){
-  window.location.href = ('https://forms.gle/69mK2AGJUmHXbNC88');
+  window.location.href = ('https://docs.google.com/forms/d/e/1FAIpQLScgZ6nKG0tCnMK8xZvUJYWcsobno0VrXAb8_UA_05XmoBbx2Q/viewform?usp=sf_link');
 }  
 function road1(){
     window.location.href = ('road1.html');
