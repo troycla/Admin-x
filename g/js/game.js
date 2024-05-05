@@ -1,4 +1,6 @@
-
+function oneto(){
+    window.location.href = ('forms.html');
+}
 function min() {
     window.location.href = ('Minecraft.html');
   }
