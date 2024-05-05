@@ -304,7 +304,6 @@ function learnf1(){
 function learnf2(){
     window.location.href = ('learnf2.html');
 }
-
 function learnf3(){
     window.location.href = ('learnf3.html');
 }
