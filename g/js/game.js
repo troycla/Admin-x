@@ -296,6 +296,3 @@ function road1(){
 function road2(){
     window.location.href = ('road2.html');
 } 
-function form(){
-  window.location.href = ('forms.html');
-}  
