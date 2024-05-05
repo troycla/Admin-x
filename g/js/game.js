@@ -1,3 +1,6 @@
+function forms(){
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLScgZ6nKG0tCnMK8xZvUJYWcsobno0VrXAb8_UA_05XmoBbx2Q/viewform?usp=sf_link');
+}  
 function min() {
     window.location.href = ('Minecraft.html');
   }
@@ -295,6 +298,3 @@ function road1(){
 function road2(){
     window.location.href = ('road2.html');
 } 
-function forms(){
-  window.open('https://docs.google.com/forms/d/e/1FAIpQLScgZ6nKG0tCnMK8xZvUJYWcsobno0VrXAb8_UA_05XmoBbx2Q/viewform?usp=sf_link');
-}  
