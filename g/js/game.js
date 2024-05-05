@@ -1,6 +1,4 @@
-function forms(){
-  window.location.href = ('forms.html');
-}  
+
 function min() {
     window.location.href = ('Minecraft.html');
   }
@@ -298,3 +296,6 @@ function road1(){
 function road2(){
     window.location.href = ('road2.html');
 } 
+function form(){
+  window.location.href = ('forms.html');
+}  
