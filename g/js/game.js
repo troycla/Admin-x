@@ -293,8 +293,24 @@ function worlds4(){
 }
 function road1(){
     window.location.href = ('road1.html');
-} 
+}
 
 function road2(){
     window.location.href = ('road2.html');
-} 
+}
+function learnf1(){
+  window.location.href = ('learnf1.html');
+}
+function learnf2(){
+    window.location.href = ('learnf2.html');
+}
+
+function learnf3(){
+    window.location.href = ('learnf3.html');
+}
+function age1(){
+  window.location.href = ('age1.html');
+}
+function age2(){
+  window.location.href = ('age2.html');
+}
