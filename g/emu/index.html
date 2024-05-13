@@ -10,10 +10,12 @@
 <body>
     <script type="text/javascript" src="games.json"></script>
     <script>
-        /**const games = [
-            {title: "Mario Kart 64 (USA)", filetype: "z64"},
-            {title: "Star Fox 64 (USA) (Rev 1)", filetype: "z64"}
-        ]**/
+        const games = [
+            {"title": "Mario Kart 64 (USA)", "filetype": "z64", "console": "n64"},
+        {"title": "Star Fox 64 (USA) (Rev 1)", "filetype": "z64", "console": "n64"}
+        {"title": "Pokemon Red (UE) [S][!]", "filetype": "zip", "console": "gba"}
+        ]
+         
         const games = fetch("games.json")
         //const games = json.games
         
