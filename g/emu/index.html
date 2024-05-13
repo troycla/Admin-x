@@ -17,15 +17,15 @@
         ]
          
         const games = fetch("games.json")
-        //const games = json.games
+        const games = json.games
         
         for(i=0; i<games.length; i++){
             var icon = "https://thumbnails.libretro.com/Nintendo%20-%20Nintendo%2064/Named_Boxarts/" + games[i].title + ".png"
-            var link = "player.html?game=" + games[i].title //+ "&id =" + i// + "&type=" + games[i].filetype
+            var link = "player.html?game=" + games[i].title + "&id =" + i + "&type=" + games[i].filetype
 
             var game = document.createElement("a")
             game.setAttribute("href", link)
-            //game.setAttribute("innerHtml", games[i].title)
+            game.setAttribute("innerHtml", games[i].title)
             game.className = "a"
 
             var cover = document.createElement("img")
