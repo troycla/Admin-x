@@ -15,7 +15,7 @@
     <script src="games.json"></script>
     <script type='text/javascript'>
         var title = new URLSearchParams(window.location.search).get('game')
-        //var id = new URLSearchParams(window.location.search).get('id')
+        var id = new URLSearchParams(window.location.search).get('id')
 
         const json = fetch("games.json")
         const games = json.games
