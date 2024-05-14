@@ -4,3 +4,6 @@
   function chat() {
     window.location.href = ('app-a/chat-gpt/index.html');
   }
+  function fretro() {
+  windwo.location.href = ('emu/index.html')
+}
