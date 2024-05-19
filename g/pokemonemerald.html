@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>
+  Admin X | Pokemon Emerald
+</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+  <body bgcolor='black'>
+    <style>
+      #fps {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font: bold;
+        font-size: 20px;
+        color:red;
+        background-color: black;
+        padding: 5px 10px;
+        border:4px solid red;
+        border-radius: 5px;
+    }
+    .embed{
+      border:3px solid red;
+      border-radius:5px;
+      width:550px;
+      height:400px;
+    }
+    embed{
+      border-radius:5px;
+    }
+    button{
+       background:black;
+       border:3px solid red;
+       border-radius:6px;
+    
+       
+   
+    }
+    font{
+      visibility:hidden;
+    }
+
+    </style>
+    <script>
+        var lastCalledTime;
+    var fps;
+
+    function updateFPS() {
+        if (!lastCalledTime) {
+            lastCalledTime = Date.now();
+            fps = 0;
+            return;
+        }
+        var delta = (Date.now() - lastCalledTime) / 1000;
+        lastCalledTime = Date.now();
+        fps = 1 / delta;
+
+        document.getElementById('fpsCount').textContent = fps.toFixed(1);
+        requestAnimationFrame(updateFPS);
+    }
+
+    updateFPS();
+    </script>
+  
+  <script>
+       function tf() {
+            var embed = document.getElementById('embeddedHTML');
+            if (!document.fullscreenElement) {
+                embed.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+</script>
+  <div id="fps">FPS: <span id="fpsCount">0</span></div><br><br><br>
+<object>
+        <embed id="embeddedHTML"  class="embed" src="emu/index.html?core=mgba&rom=https://raw.githubusercontent.com/troycla/Admin-x/main/g/emu/roms/gba/Pokemon%20-%20Emerald%20Version%20(U).zip"></embed>
+         
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script><script src="js/dev-console.js"></script>
+</object><br><br><li><font>
+|---------------------------------------------------------------------------------------------|
+</font>
+<i onclick="tf()" class="material-icons" style=" border:3px solid red;border-radius:5px;font-size:24px;color:red;" >fullscreen</i></li>
+</body>
+</html>
