@@ -4,26 +4,49 @@
   <title>Admin X | Game's</title>
 </head>
   
-<body bgcolor="black">
+<body>
 <style>
+   body{
+     background:black;
+   }
     img{
-     
       border-radius:10px;
       width:180px;
       height:120px;
+      
     }
+   img:hover{
+      border-radius:10px;
+      width:180px;
+      height:120px;
+      
+    }
+    .bb1{
+     border:2px solid red;
+     border-radius:3px;
+     background:black;
+     color:red;
+     transition:1s;
+     }
+     .bb1:hover{
+     border:2px solid black;
+     border-radius:3px;
+     background:red;
+     color:black;
+     transition:1s;
+     }
+    .div1{
 
-.div1{
-
-  border-radius: 10px;
-  width:180px;
-  height:120px;
-}
+     border-radius: 10px;
+     width:180px;
+     height:120px;
+     }
 
     .search-container {
       text-align: center;
       margin-bottom: 10px;
     }
+
     .search-container input[type="text"] {
       padding: 10px;
       width: 300px;
@@ -43,21 +66,24 @@
       margin: 5px;
     }
     .content-item button {
-      
+       box-shadow: 1px 1px  10px red;
       padding: 10px 20px;
       border-radius: 10px;
       font-size: 16px;
       color: red;
       background-color: black;
       border: 2px solid red;
+      transition:1s;
     }
        .content-item:hover button {
+          box-shadow: 1px 1px  15px red;
       padding: 10px 20px;
       border-radius: 10px;
       font-size: 16px;
       color: black;
       background-color: red;
       border: 3px solid red;
+      transition:1s;
     }
     
   </style>
@@ -119,7 +145,7 @@
 <div class="content-item" data-category="category51"><button onclick="evo()"><div class="div1"><img src='img/evo.png'></div><br>Evolution</button></div>
 <div class="content-item" data-category="category52"><button onclick="achl()"><div class="div1"><img src='img/achl.png'></div><br>Little Alchemy</button></div>
 <div class="content-item" data-category="category53"><button onclick="thecube()"><div class="div1"><img src='img/thecube.png'></div><br>The Cube</button></div>
-<div class="content-item" data-category="category54"><button onclick="mrmine()"><div class="div1"><img src='img/mrmine.jpeg'></div><br>Mr.Mine</button></div>
+<div class="content-item" data-category="category54"><button onclick="btbf()"><div class="div1"><img src='img/mrmine.jpeg'></div><br>Mr.Mine</button></div>
 <div class="content-item" data-category="category55"><button onclick="onone()"><div class="div1"><img src='img/1on1.jpeg'></div><br>1on1 Soccer</button></div>
 <div class="content-item" data-category="category56"><button onclick="fruit()"><div class="div1"><img src='img/fruit.jpg'></div><br>Fruit Ninja</button></div>
 <div class="content-item" data-category="category57"><button onclick="burrito()"><div class="div1"><img src='img/burrito.jpeg'></div><br>Burrito Bison</button></div>
@@ -162,17 +188,39 @@
 <div class="content-item" data-category="category94"><button onclick="pap2()"><div class="div1"><img src='img/paps2.jpeg'></div><br>Papa Louie:2</button></div>
 <div class="content-item" data-category="category95"><button onclick="pap3()"><div class="div1"><img src='img/paps3.jpeg'></div><br>Papa Louie:3</button></div>
 <div class="content-item" data-category="category96"><button onclick="tinyfish()"><div class="div1"><img src='img/tiny-fishing.png'></div><br>Tiny Fishing</button></div>
-<div class="content-item" data-category="category97"><button onclick="pokemonred()"><div class="div1"><img src='img/pokemon-red.webp'></div><br>Pokemon Red</button></div>
-<div class="content-item" data-category="category98"><button onclick="pokemonblue()"><div class="div1"><img src='img/pokemon-blue.webp'></div><br>Pokemon Blue</button></div>
-<div class="content-item" data-category="category99"><button onclick="pokemonyellow()"><div class="div1"><img src='img/pokemon-yellow.webp'></div><br>Pokemon Yellow</button></div>
-<div class="content-item" data-category="category100"><button onclick="fifa()"><div class="div1"><img src='img/fifa.webp'></div><br>FIFA 2007 </button></div>
-<div class="content-item" data-category="category101"><button onclick="doom()"><div class="div1"><img src='img/doom.webp'></div><br>Doom </button></div>
-<div class="content-item" data-category="category102"><button onclick="mariob()"><div class="div1"><img src='img/mariob.webp'></div><br>Mario</button></div>
-<div class="content-item" data-category="category102"><button onclick="mariob()"><div class="div1"><img src='img/mariob.webp'></div><br>Mario</button></div>
+<div class="content-item" data-category="category97"><button onclick="btbf()"><div class="div1"><img src='img/pokemon-red.webp'></div><br>Pokemon Red</button></div>
+<div class="content-item" data-category="category98"><button onclick="btbf()"><div class="div1"><img src='img/pokemon-blue.webp'></div><br>Pokemon Blue</button></div>
+<div class="content-item" data-category="category99"><button onclick="btbf()"><div class="div1"><img src='img/pokemon-yellow.webp'></div><br>Pokemon Yellow</button></div>
+<div class="content-item" data-category="category100"><button onclick="btbf()"><div class="div1"><img src='img/fifa.webp'></div><br>FIFA 2007 </button></div>
+<div class="content-item" data-category="category101"><button onclick="btbf()"><div class="div1"><img src='img/doom.webp'></div><br>Doom </button></div>
+<div class="content-item" data-category="category102"><button onclick="btbf()"><div class="div1"><img src='img/mariob.webp'></div><br>Mario</button></div>
 <div class="content-item" data-category="category103"><button onclick="miniput1()"><div class="div1"><img src='img/minip1.webp'></div><br>Mini Put1</button></div>
 <div class="content-item" data-category="category104"><button onclick="miniput3()"><div class="div1"><img src='img/minip3.jpeg'></div><br>Mini Put 3</button></div>
+<div class="content-item" data-category="category105"><button onclick="bowman1()"><div class="div1"><img src='img/'bowman1.jpeg></div><br>BowMan</button></div>
+<div class="content-item" data-category="category106"><button onclick="bowman2()"><div class="div1"><img src='img/bowman2.png'></div><br>BowMan 2</button></div>
+
   </div>
-  <script src="js/search.js"></script>
+  <button class='bb1' onclick="history.back()">Back</button>
+  
+  <script>
+        function searchPage() {
+      var input, filter, content, items, i;
+      input = document.getElementById('searchBar');
+      filter = input.value.toLowerCase();
+      content = document.getElementById('content');
+      items = content.getElementsByClassName('content-item');
+
+      for (i = 0; i < items.length; i++) {
+        var text = items[i].textContent.toLowerCase();
+        var category = items[i].getAttribute('data-category').toLowerCase();
+        if (text.indexOf(filter) > -1 || category.indexOf(filter) > -1) {
+          items[i].style.display = '';
+        } else {
+          items[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
   <script>
     function pokemonred(){
       window.location.href = ('pokemonred.html');
@@ -194,7 +242,7 @@
       window.location.href = ('fifa.html');
     }
     function doom(){
-      window.location.href = ('doom.html')
+      window.location.href = ('doom.html');
     }
     function mariob(){
       window.location.href = ('mariob.html');
@@ -203,7 +251,14 @@
   </script>
 <script>
 function soon(){
-  alert("Well you Clicked on this for Nothing")
+  alert("This Will Be Added Soon!");
+}
+function nsam(){
+ alert('This Is Mot Supported Any More!');
+}
+function btbf(){
+  alert('This Game is Broken It might Not Be Fix Or Even Worse Removed');
+  alert(' Admin-x Is Looking Into It!');
 }
 function oneto(){
 window.location.href = ('forms.html');
@@ -559,6 +614,12 @@ function tinyfish(){
  function miniput3(){
    window.location.href = ('mini3.html');
   }
+ function bowman1(){
+   window.location.href = ('bowman1.html');
+ }
+ function bowman2(){
+   window.location.href = ('bowman2.html');
+ }
 </script>
 
 </body>
