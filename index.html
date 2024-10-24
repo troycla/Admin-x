@@ -42,7 +42,16 @@ alert('you are running a out dated version of admin x please note that this migh
         opacity: 0;
         text-shadow: 0 0 10px red;
       }
-    }
+   .custom-loader {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:#000000;
+  border-right-color: #F40000;
+  animation:s2 1s infinite linear;
+}
+@keyframes s2 {to{transform: rotate(1turn)}}
   </style>
   <script>
     setTimeout(function() {
@@ -54,6 +63,8 @@ alert('you are running a out dated version of admin x please note that this migh
 <body bgcolor="black">
 
   
-  <div id="loading">Loading...</div>
+  <div class="custom-loader">
+   <br>Loading
+  </div>
 </body>
 </html>
