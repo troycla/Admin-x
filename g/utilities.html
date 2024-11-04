@@ -6,21 +6,47 @@
   
 <body bgcolor="black">
 <style>
+       body{
+     background:black;
+   }
     img{
-     
       border-radius:10px;
+      width:180px;
+      height:120px;
+      
     }
-  
-     .div1{
-       border-radius:10px;
-       border: 3px red; 
-       height:120px;
-       width:180px ;
+   img:hover{
+      border-radius:10px;
+      width:180px;
+      height:120px;
+      
+    }
+    .bb1{
+     border:2px solid red;
+     border-radius:3px;
+     background:black;
+     color:red;
+     transition:1s;
      }
+     .bb1:hover{
+     border:2px solid black;
+     border-radius:3px;
+     background:red;
+     color:black;
+     transition:1s;
+     }
+    .div1{
+
+     border-radius: 10px;
+     width:180px;
+     height:120px;
+     }
+
     .search-container {
       text-align: center;
       margin-bottom: 10px;
     }
+
     .search-container input[type="text"] {
       padding: 10px;
       width: 300px;
@@ -40,21 +66,26 @@
       margin: 5px;
     }
     .content-item button {
+       box-shadow: 1px 1px  10px red;
       padding: 10px 20px;
       border-radius: 10px;
       font-size: 16px;
       color: red;
       background-color: black;
       border: 2px solid red;
+      transition:1s;
     }
-    .content-item:hover button {
+       .content-item:hover button {
+          box-shadow: 1px 1px  15px red;
       padding: 10px 20px;
       border-radius: 10px;
       font-size: 16px;
       color: black;
       background-color: red;
       border: 3px solid red;
+      transition:1s;
     }
+
 
   </style>
   <div class="search-container">
@@ -65,6 +96,8 @@
 <div class="content-item" data-category="category1"><button onclick="draw()"><div class="div1"><img src='img/app/drawing.png'></div><br>Drawing pad</button></div>
 <div class="content-item" data-category="category2"><button onclick="chat()"><div class="div1"><img src='img/app/chatgpt.png'></div><br>Chat GPT</button></div>
     <div class="content-item" data-category="category3"><button onclick="fretro()"><div class="div1"><img src='img/app/retro.png'></div><br>Retro Arch</button></div>
+        <div class="content-item" data-category="category4"><button onclick="google()"><div class="div1"><img src='img/app/google.png'></div><br>Google</button></div>
+    
   </div>
   <script src="js/search.js"></script>
 <script src="js/apps.js" ></script>
