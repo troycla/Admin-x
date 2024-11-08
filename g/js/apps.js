@@ -10,3 +10,6 @@
 function google(){
   window.location.href = ('https://void12.myvnc.com/static/tiw/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F');
 }
+function Ubv(){
+  window.location.href = ('app-a/Ubv/index.html');
+}
