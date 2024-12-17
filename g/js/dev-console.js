@@ -5,7 +5,7 @@
 javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();
    
 
-
+function ready(){
  function aceapp(){
 const myAce = document.createElement("div");
 myAce.id = "myace";
@@ -399,9 +399,7 @@ div1.appendChild(textareae);
 const styl1 = document.createElement('style');
 styl1.innerHTML =`
 
-  body {
-   
-  }
+
   
      .cheatmenuv4 {
             
@@ -3303,4 +3301,4 @@ function dragElement(elmnt) {
     elmnt.onmousedown = dragMouseDown;
   }
 }
-
+}
