@@ -47,7 +47,6 @@ javascript:(function () { var script = document.createElement('script'); script.
 
     const links = [
         { text: 'Home', href: '../g/Admin-x.html', onclick: '' },
-        { text: 'Back', href: '', onclick: 'window.history.back();' },
         { text: 'FullScreen', href: '', onclick: 'ghk()' }
     ];
 
