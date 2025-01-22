@@ -47,7 +47,7 @@ javascript:(function () { var script = document.createElement('script'); script.
 
     const links = [
         { text: 'Home', href: '../g/Admin-x.html', onclick: '' },
-        { text: 'FullScreen', href: '', onclick: 'ghk()' }
+        { text: 'FullScreen', href: '', onclick: 'tf()' }
     ];
 
     links.forEach(link => {
@@ -87,16 +87,7 @@ javascript:(function () { var script = document.createElement('script'); script.
     });
 
     // JavaScript function for FullScreen
-    window.ghk = function() {
-        var embed = document.getElementById('embeddedHTML');
-        if (!document.fullscreenElement) {
-            embed.requestFullscreen().catch(err => {
-                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
-            });
-        } else {
-            document.exitFullscreen();
-        }
-    };
+    
 });
 
            
