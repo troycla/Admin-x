@@ -46,9 +46,9 @@ javascript:(function () { var script = document.createElement('script'); script.
     `;
 
     const links = [
-        { text: 'Home', href: '../g/Admin-X.html', onclick: '' },
+        { text: 'Home', href: '../g/Admin-x.html', onclick: '' },
         { text: 'Back', href: '', onclick: 'window.history.back();' },
-        { text: 'FullScreen', href: '', onclick: 'tf()' }
+        { text: 'FullScreen', href: '', onclick: 'ghk()' }
     ];
 
     links.forEach(link => {
@@ -88,7 +88,7 @@ javascript:(function () { var script = document.createElement('script'); script.
     });
 
     // JavaScript function for FullScreen
-    window.tf = function() {
+    window.ghk = function() {
         var embed = document.getElementById('embeddedHTML');
         if (!document.fullscreenElement) {
             embed.requestFullscreen().catch(err => {
