@@ -185,7 +185,7 @@ function createtab(){
    const tabsec1 = document.createElement('iframe');
     tabsec1.className = 'tabseco';
     tabsec1.id = 'section3';
-    tabsec1.src ='g/app-a/chat-gpt/index.html';
+    tabsec1.src ='./app-a/chat-gpt/index.html';
     myAce.appendChild(tabsec1);
 }
 
