@@ -1,183 +1,112 @@
-<html>
-          <head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <title>
- Admin X | Main
-  </title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin-x | Main</title>
+	<style>
+		body {
 
-   </head>
-
-   <body bgcolor="black">
-
-
-
-  <nav id='menu'>
-  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-  <ul>
-    <li><a onclick="upade()">Update's</a></li>
-    <li><a class='dropdown-arrow' href='http://'>testing</a>
-      <ul class='sub-menus'>
-        <li><a onclick="win()">open in window</a></li>
-        <li><a href='http://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-      </ul>
-    </li>
-   <li><a href='utilities.html'>App's</a></li>
-    <li><a href='games.html'>Game's</a></li>
-    <li><a class='dropdown-arrow' href='http://'>other</a>
-      <ul class='sub-menus'>
-        <li><a href='https://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-        <li><a href='http://'>soon</a></li>
-      </ul>
-    </li>
-
-  </ul>
-</nav>
- <style>
-   #menu {
-     background: #000000;
-     height: 43px;
-     border-radius: 11px;
-     border: 5px solid #FF0000;
-     width:493px;
-   }
-   #menu ul, #menu li {
-     margin: 0 auto;
-     padding: 0;
-     list-style: none
-   }
-   #menu ul {
-     width: 100%;
-     text-align: left;
-   }
-   #menu li {
-     display: inline-block;
-     position: relative;
-   }
-   #menu a {
-     display: block;
-     line-height: 42px;
-     padding: 0 14px;
-     text-decoration: none;
-     color: #FF0000;
-     font-size: 19px;
-   }
-   #menu a.dropdown-arrow:after {
-     content: "\25BE";
-     margin-left: 5px;
-     border-radius: 10px;
-   }
-   #menu li a:hover {
-     color: #000000;
-     background: #FF0000;
-     border-radius: 10px;
-   }
-   #menu input {
-     display: none;
-     margin: 0;
-     padding: 0;
-     height: 52px;
-     width: 100%;
-     opacity: 0;
-     cursor: pointer
-   }
-   #menu label {
-     display: none;
-     line-height: 42px;
-     text-align: center;
-     position: absolute;
-     left: 35px
-     border-radius: 10px;
-
-   }
-   #menu label:before {
-     font-size: 1.6em;
-     color: #FF0000;
-     content: "\2261";
-     margin-left: 20px;
-     border-radius: 10px;
-     border:2px red;
-   }
-   #menu ul.sub-menus{
-     height: auto;
-     overflow: hidden;
-     width: 170px;
-     background: #000000;
-     position: absolute;
-     z-index: 99;
-     display: none;
-     border-radius: 10px;
-   }
-   #menu ul.sub-menus li {
-     display: block;
-     text-align: left;
-     width: 100%;
-   border-radius: 10px;
-
-   }
-   #menu ul.sub-menus a {
-     color: #FF0000;
-     font-size: 16px;
-     border-radius: 10px;
-   }
-   #menu li:hover ul.sub-menus {
-     display: block
-
-   }
-   #menu ul.sub-menus a:hover{
-     background: #FF0000;
-     color: #000000;
-   border-radius: 10px;
-
-   }
-   @media screen and (max-width: 800px){
-     #menu {position:relative}
-     #menu ul {background:#000000;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
-     #menu ul.sub-menus {width:100%;position:static;}
-     #menu ul.sub-menus a {padding-left:30px;}
-     #menu li {display:block;float:none;width:;}
-     #menu input, #menu label {position:absolute;top:0;left:0;display:block}
-     #menu input {z-index:4}
-     #menu input:checked + label {color:#FF0000}
-     #menu input:checked + label:before {content:"\00d7"}
-     #menu input:checked ~ ul {display:block}
-   }
+			font-family: Arial, sa;
+			margin: 0;
+			padding: 0;
+      background:#090909;
+		}
    
+		.navbar {
+			background-color: #090909;
+      border-radius:23px;
+	    position:absolute;
+      top:30px;
+	    display-content:row;
+   
+      border:none;
+      border-radius:2px;
+      color:red;
+
+		}
+
+		.navbar a {
+			color:red;
+      border-radius:10px;
+      background-color:#090909;
+			text-align: center;
+			padding: 10px 20px;
+			text-decoration: none;
+	box-shadow:1px 2px 10px 1px black;
+			transition:2s;
+		}
+
+		.navbar a:hover {
+	box-shadow:1px 2px 10px 1px black;
+      border:2px solid red;
+      border-radius:40px;
+			background-color: #600C0C;
+			color: black;
+		}
+    .info1{
+      position:absolute;
+		box-shadow:1px 2px 10px 1px black;
+      display:flex;
+      wrap-text:100px;
+      top:150px;
+      left:5px;
+      overflow:wrap;
+
+      width:360px;
+      text-align:center;
+
+      border-radius:3px;
+      color:red;
+    }
+		.info2{
+		position:absolute;
+		display:flex;
+		wrap-text:100px;
+		top:150px;
+		left:5px;
+		overflow:wrap;
+		width:340px;
+
+		border:1px solid black;
+		
+		border-radius:3px;
+		color:red;
+		}
+	.footer {
+	background-color: #f1f1f1;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	margin-top: auto;
+	}
+	.footer p {
+	margin: 0;
+	color: #555;
+	}
+	.footer a {
+	color: #007BFF;
+	text-decoration: none;
+	}
+	.footer a:hover {
+	text-decoration: underline;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="navbar">
+		<a href="utilities.html">Apps</a>
+		<a href="games.html">Games</a>
+	</div>
   
- </style><style>
-   iframe{
-     border:3px solid red;
-     border-radius:5px;
-     height:600px;
-     width: 1000px;
-   }
- </style>
-<script>
-  function updatemenu() {
-  if (document.getElementById('responsive-menu').checked == true) {
-    document.getElementById('menu').style.borderBottomRightRadius = '0';
-    document.getElementById('menu').style.borderBottomLeftRadius = '0';
-  }else{
-    document.getElementById('menu').style.borderRadius = '10px';
-  }
-}
-
-</script>
-<script>
-          function upade(){
-        window.open("updates.html", "_blank", "toolbar=yes,scrollbars=yes, fullscreen=yes,resizable=yes,top=500,left=500,width=400,height=400");
-}
-</script>
-<script>function win(){
-        window.open("Admin-x.html", "_blank", "toolbar=yes,scrollbars=yes, fullscreen=yes,resizable=yes,top=500,left=500,width=400,height=400");
-}
-</script>
-
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRsq5pzIzLqA10fQKQllyTgzNbF3KHBJjgl6r1BN2dMazmb2G0tK1TkluHTjYj0AOFShOM4bUCuZSSL/embed?start=false&loop=false&delayms=3000"  allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-  </body>
+  <div class='info1'>
+    hello This is Admin-x Speaking i wish to let you know that you have been given access to this site by a certaint somone and and at some point i may know about it and some i may not know so i will keep and eye out for the one who will be on it by looking at user activity this is not a viliation to you right and if you enter throw a given link then you have accepted the user agrement. if so then complain in to one of the ceo of the site if they dont really care about it then i will look into it if but if one contines to complain then i will have no other reason to look into the problem ect, if you wish not to read this then you dont care about your user agrement there for i have not reason to help you with your problem, and also i am tired of yall asking for thing that you the acteil user would have to install the app or have to a specific os(device). to run if so then dont rqeust it also if its too big it will no be add enless a better way to upload it is found some game will break the site my go down a lot of thing could happend not all of these thing are in my control
+  </div>
+  <footer><footer>
+</body>
 
 </html>
