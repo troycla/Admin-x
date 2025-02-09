@@ -147,7 +147,7 @@ border: 3px solid red;
 <div class="content-item" data-category="category2"><button onclick="min()"><div class="div1"><img src='img/mine.jpeg'></div><br>Minecraft</button></div>
 <div class="content-item" data-category="category3"><button onclick="flappy()"><div class="div1"><img src='img/flappy.jpeg'></div><br>Flappy bird</button></div>
 <div class="content-item" data-category="category4"><button onclick="retro()"><div class="div1"><img src='img/retro.png'></div><br>Retro bowl</button></div>
-<div class="content-item" data-category="category5"><button onclick="drag()"><div class="div1"><img src='img/dragv3.jpeg'></div><br>Drag race v3</button></div>
+<div class="content-item" data-category="category5"><button onclick="openGamePage('https://raw.githubusercontent.com/troycla/drag-racing-v3-flash-emulor-ruffle/main/dragracing.swf')"><div class="div1"><img src='img/dragv3.jpeg'></div><br>Drag race v3</button></div>
 <div class="content-item" data-category="category6"><button onclick="check()"><div class="div1"><img src='img/checkers.jpeg'></div><br>Checkers</button></div>
 <div class="content-item" data-category="category7"><button onclick="tetris()"><div class="div1"><img src='img/tetris.jpeg'></div><br>Tetris</button></div>
 <div class="content-item" data-category="category8"><button onclick="itn()"><div class="div1"><img src='img/buddy.jpeg'></div><br>Interactive buddy</button></div>
@@ -267,6 +267,13 @@ border: 3px solid red;
     
   </div>
   <button class='bb1' onclick="history.back()">Back</button>
+  <script>
+        function openGamePage(gameFile) {
+            window.location.href = 'Flash.html?game=' + gameFile;
+        }
+
+
+  </script>
   
   <script>
         function searchPage() {
