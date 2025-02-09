@@ -92,10 +92,12 @@
     }
 	</script>
 	<div id="fps">FPS: <span id="fpsCount">0</span></div><br><br><br>
-	<div id="flash-container"></div>
+	<div id="flash"></div>
 	<br><br>
-	
+
 	<script>
+
+	const flashContainer = document.getElementById('flash');
 		function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
@@ -103,12 +105,12 @@
 
     const gameFile = getQueryParam('game');
     if (gameFile) {
+       
         const embedElement = document.createElement('embed');
-        embedElement.id ='embeddedHTML';
-        embedElement.src = gameFile;
-        embedElement.className = 'embed';
-        flash-container.appendChild(embeddedElement);
-   
+        embedElement.setAttribute('src', gameFile);
+        embedElement.setAttribute('id', 'embeddedHTML');
+        embedElement.classList.add('embed');
+        flashContainer.appendChild(embedElement);
     } else {
         flashContainer.innerHTML = 'No game selected.';
     }
