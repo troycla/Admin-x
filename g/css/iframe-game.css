@@ -1,0 +1,48 @@
+ body{
+      background:#090909;
+    }
+		#fps {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			font: bold;
+			font-size: 20px;
+			color: red;
+			background-color: black;
+			padding: 5px 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+      box-shadow:1px 2px 10px 1px black;
+		}
+
+		.embed {
+			border: 1px solid red;
+			border-radius: 3px;
+		box-shadow:1px 2px 10px 1px black;
+		}
+
+		embed {
+			border-radius: 5px;
+		box-shadow:1px 2px 10px 1px black;
+		}
+
+		button {
+			background: black;
+			border: 3px solid red;
+			border-radius: 6px;
+		box-shadow:1px 2px 10px 1px black;
+
+
+
+		}
+
+		font {
+			visibility: hidden;
+		}
+	.material-icons{
+	border:1px solid black;
+  border-radius:5px;
+  font-size:24px;
+  color:red; 
+  box-shadow:1px 2px 10px 1px black;
+  }
