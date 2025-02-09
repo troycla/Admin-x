@@ -1,282 +1,489 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Admin X | Game's</title>
+	<title>Admin X | Game's</title>
 </head>
-  
+
 <body>
-<style>
-  body {
-background: #090909;
-}
-/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
-/** {
+	<style>
+		body {
+			background: #090909;
+		}
+
+		/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+		/** {
   scrollbar-width: thin;
   scrollbar-color: #FF0000 #DFE9EB;
 }*/
 
-/* Chrome, Edge and Safari */
-*::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
-}
-*::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #DFE9EB;
-}
+		/* Chrome, Edge and Safari */
+		*::-webkit-scrollbar {
+			height: 10px;
+			width: 10px;
+		}
 
-*::-webkit-scrollbar-track:hover {
-  background-color: #B8C0C2;
-}
+		*::-webkit-scrollbar-track {
+			border-radius: 5px;
+			background-color: #DFE9EB;
+		}
 
-*::-webkit-scrollbar-track:active {
-  background-color: #B8C0C2;
-}
+		*::-webkit-scrollbar-track:hover {
+			background-color: #B8C0C2;
+		}
 
-*::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: #FF0000;
-}
+		*::-webkit-scrollbar-track:active {
+			background-color: #B8C0C2;
+		}
 
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #FF0000;
-}
+		*::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: #FF0000;
+		}
 
-*::-webkit-scrollbar-thumb:active {
-  background-color: #000000;
-}
+		*::-webkit-scrollbar-thumb:hover {
+			background-color: #FF0000;
+		}
 
-img {
-      border:2px soild #201F1F;
-border-radius: 10px;
-width: 180px;
-height: 120px;
-}
+		*::-webkit-scrollbar-thumb:active {
+			background-color: #000000;
+		}
 
-img:hover {
-border-radius: 10px;
-width: 180px;
-height: 120px;
+		img {
+			border: 2px soild #201F1F;
+			border-radius: 10px;
+			width: 180px;
+			height: 120px;
+		}
 
-}
+		img:hover {
+			border-radius: 10px;
+			width: 180px;
+			height: 120px;
 
-
-.bb1 {
-border: 2px solid red;
-border-radius: 3px;
-background: #090909;
-color: red;
-transition: 1s;
-}
-
-.bb1:hover {
-border: 2px solid black;
-border-radius: 3px;
-background: red;
-color: black;
-transition: 1s;
-}
-
-.div1 {
-
-border-radius: 10px;
-width: 180px;
-height: 120px;
-}
-
-.search-container {
-text-align: center;
-margin-bottom: 10px;
-}
-
-.search-container input[type="text"] {
-padding: 10px;
-width: 300px;
-border-radius: 5px;
-border: 3px solid red;
-font-size: 16px;
-background: black;
-color: red;
-}
-
-#content {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.content-item {
-margin: 5px;
-}
+		}
 
 
+		.bb1 {
+			border: 2px solid red;
+			border-radius: 3px;
+			background: #090909;
+			color: red;
+			transition: 1s;
+		}
 
-.content-item button {
-box-shadow: 1px 2px 10px 1px black;
-padding: 10px 20px;
-border-radius: 10px;
-font-size: 16px;
-color: red;
-background-color: #090909;
-border: 2px solid black;
-transition: 1s;
+		.bb1:hover {
+			border: 2px solid black;
+			border-radius: 3px;
+			background: red;
+			color: black;
+			transition: 1s;
+		}
+
+		.div1 {
+
+			border-radius: 10px;
+			width: 180px;
+			height: 120px;
+		}
+
+		.search-container {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.search-container input[type="text"] {
+			padding: 10px;
+			width: 300px;
+			border-radius: 5px;
+			border: 3px solid red;
+			font-size: 16px;
+			background: black;
+			color: red;
+		}
+
+		#content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.content-item {
+			margin: 5px;
+		}
 
 
-}
 
-.content-item:hover button {
-box-shadow: 1px 2px 10px 2px black;
-padding: 10px 20px;
-margin: 9px;
-border-radius: 10px;
-font-size: 16px;
-color: black;
-background-color: #600C0C;
-border: 3px solid red;
-
-}
+		.content-item button {
+			box-shadow: 1px 2px 10px 1px black;
+			padding: 10px 20px;
+			border-radius: 10px;
+			font-size: 16px;
+			color: red;
+			background-color: #090909;
+			border: 2px solid black;
+			transition: 1s;
 
 
-  </style>
-  <div class="search-container">
-    <input class="shb." type="text" id="searchBar" placeholder="Search..." onkeyup="searchPage()">
+		}
+
+		.content-item:hover button {
+			box-shadow: 1px 2px 10px 2px black;
+			padding: 10px 20px;
+			margin: 9px;
+			border-radius: 10px;
+			font-size: 16px;
+			color: black;
+			background-color: #600C0C;
+			border: 3px solid red;
+
+		}
+	</style>
+	<div class="search-container">
+		<input class="shb." type="text" id="searchBar" placeholder="Search..." onkeyup="searchPage()">
   </div>
-  
-  <div id="content">
-<div class="content-item" data-category="category1"><button onclick="oneto()"><div class="div1"><img src='img/form.png'></div><br>Request A Game</button></div>
-<div class="content-item" data-category="category2"><button onclick="min()"><div class="div1"><img src='img/mine.jpeg'></div><br>Minecraft</button></div>
-<div class="content-item" data-category="category3"><button onclick="flappy()"><div class="div1"><img src='img/flappy.jpeg'></div><br>Flappy bird</button></div>
-<div class="content-item" data-category="category4"><button onclick="retro()"><div class="div1"><img src='img/retro.png'></div><br>Retro bowl</button></div>
-<div class="content-item" data-category="category5"><button onclick="openGamePage('https://raw.githubusercontent.com/troycla/drag-racing-v3-flash-emulor-ruffle/main/dragracing.swf')"><div class="div1"><img src='img/dragv3.jpeg'></div><br>Drag race v3</button></div>
-<div class="content-item" data-category="category6"><button onclick="check()"><div class="div1"><img src='img/checkers.jpeg'></div><br>Checkers</button></div>
-<div class="content-item" data-category="category7"><button onclick="tetris()"><div class="div1"><img src='img/tetris.jpeg'></div><br>Tetris</button></div>
-<div class="content-item" data-category="category8"><button onclick="itn()"><div class="div1"><img src='img/buddy.jpeg'></div><br>Interactive buddy</button></div>
-<div class="content-item" data-category="category9"><button onclick="portal()"><div class="div1"><img src='img/portal.jpeg'></div><br>Portal</button></div>
-<div class="content-item" data-category="category10"><button onclick="pacin()"><div class="div1"><img src='img/pacin.png'></div><br>Pacman</button></div>
-<div class="content-item" data-category="category11"><button onclick="duck1()"><div class="div1"><img src='img/duck.jpeg'></div><br>Duck life</button></div>
-<div class="content-item" data-category="category12"><button onclick="duck2()"><div class="div1"><img src='img/duck2.jpeg'></div><br>Duck Life 2</button></div>
-<div class="content-item" data-category="category13"><button onclick="duck3()"><div class="div1"><img src='img/duck3.jpeg'></div><br>Duck Life 3</button></div>
-<div class="content-item" data-category="category14"><button onclick="duck4()"><div class="div1"><img src='img/duck4.jpeg'></div><br>Duck Life 4</button></div>
-<div class="content-item" data-category="category15"><button onclick="cookies()"><div class="div1"><img src='img/cookie.jpeg'></div><br>Cookie Clicker</button></div>
-<div class="content-item" data-category="category16"><button onclick="bitcoin()"><div class="div1"><img src='img/bitcoin.png'></div><br>Idle Bit Coin</button></div>
-<div class="content-item" data-category="category17"><button onclick="tiq()"><div class="div1"><img src='img/impose.png'></div><br>The Impossible Quiz</button></div>
-<div class="content-item" data-category="category18"><button onclick="dj()"><div class="div1"><img src='img/doddle.jpeg'></div><br>Doodle Jump</button></div>
-<div class="content-item" data-category="category19"><button onclick="happywheel()"><div class="div1"><img src='img/wheels.jpeg'></div><br>Happy Wheel's</button></div>
-<div class="content-item" data-category="category20"><button onclick="pclicker()"><div class="div1"><img src='img/pc.jpeg'></div><br>Particle Clicker</button></div>
-<div class="content-item" data-category="category21"><button onclick="ib()"><div class="div1"><img src='img/ib.png'></div><br>Idle Break Out</button></div>
-<div class="content-item" data-category="category22"><button onclick="p2()"><div class="div1"><img src='img/io2.jpeg'></div><br>Paper.io 2</button></div>
-<div class="content-item" data-category="category23"><button onclick="sh()"><div class="div1"><img src='img/superhot.jpeg'></div><br>Super Hot</button></div>
-<div class="content-item" data-category="category24"><button onclick="bs()"><div class="div1"><img src='img/bs.jpeg'></div><br>Basket Ball Star's</button></div>
-<div class="content-item" data-category="category25"><button onclick="geo()"><div class="div1"><img src='img/geo.jpeg'></div><br>Geo Dash</button></div>
-<div class="content-item" data-category="category26"><button onclick="slope()"><div class="div1"><img src='img/slope.png'></div><br>Slope</button></div>
-<div class="content-item" data-category="category27"><button onclick="rs()"><div class="div1"><img src='img/roofe.jpeg'></div><br>Rooftop Snipers</button></div>
-<div class="content-item" data-category="category28"><button onclick="sk()"><div class="div1"><img src='img/smash.jpeg'></div><br>Smash Kart</button></div>
-<div class="content-item" data-category="category29"><button onclick="lol()"><div class="div1"><img src='img/1v1.jpeg'></div><br>1v1.lol</button></div>
-<div class="content-item" data-category="category30"><button onclick="sm64()"><div class="div1"><img src='img/64.jpeg'></div><br>Super Mario 64</button></div>
-<div class="content-item" data-category="category31"><button onclick="tr()"><div class="div1"><img src='img/tunnel.jpeg'></div><br>Tunnel Rush</button></div>
-<div class="content-item" data-category="category32"><button onclick="bl()"><div class="div1"><img src='img/bitlife.jpeg'></div><br>Bit Life</button></div>
-<div class="content-item" data-category="category33"><button onclick="bb()"><div class="div1"><img src='img/bb1.jpeg'></div><br>Basket Bros</button></div>
-<div class="content-item" data-category="category34"><button onclick="dh()"><div class="div1"><img src='img/drift2.jpeg'></div><br>Drift Hunters</button></div>
-<div class="content-item" data-category="category35"><button onclick="cr()"><div class="div1"><img src='img/ctr.png'></div><br>Cross The Road</button></div>
-<div class="content-item" data-category="category36"><button onclick="perc()"><div class="div1"><img src='img/pc12.jpeg'></div><br>Perfect Circle</button></div>
-<div class="content-item" data-category="category37"><button onclick="fn()"><div class="div1"><img src='img/frying1.jpeg'></div><br>Frying Nemo</button></div>
-<div class="content-item" data-category="category38"><button onclick="ss()"><div class="div1"><img src='img/subs.jpeg'></div><br>Subway Surfers</button></div>
-<div class="content-item" data-category="category39"><button onclick="msc2()"><div class="div1"><img src='img/msc2.jpeg'></div><br>Madalin Stunt Cars 2</button></div>
-<div class="content-item" data-category="category40"><button onclick="msc3()"><div class="div1"><img src='img/msc3.jpeg'></div><br>Madalin Stunt Cars 3</button></div>
-<div class="content-item" data-category="category41"><button onclick="raze1()"><div class="div1"><img src='img/raze1.jpeg'></div><br>Raze 1</button></div>
-<div class="content-item" data-category="category42"><button onclick="raze2()"><div class="div1"><img src='img/raze2.jpeg'></div><br>Raze 2</button></div>
-<div class="content-item" data-category="category43"><button onclick="raze3()"><div class="div1"><img src='img/raze3.jpeg'></div><br>Raze 3</button></div>
-<div class="content-item" data-category="category44"><button onclick="cr2()"><div class="div1"><img src='img/cluster.jpeg'></div><br>Cluster Rush</button></div>
-<div class="content-item" data-category="category45"><button onclick="scrapm()"><div class="div1"><img src='img/scrap.jpeg'></div><br>Scrap Metal</button></div>
-<div class="content-item" data-category="category46"><button onclick="warfare1917()"><div class="div1"><img src='img/w1.jpeg'></div><br>Warfare 1917</button></div>
-<div class="content-item" data-category="category47"><button onclick="warfare1944()"><div class="div1"><img src='img/w2.jpeg'></div><br>Warfare 1944</button></div>
-<div class="content-item" data-category="category48"><button onclick="run2()"><div class="div1"><img src='img/r2.jpeg'></div><br>Run 2</button></div>
-<div class="content-item" data-category="category49"><button onclick="agc()"><div class="div1"><img src='img/agc.jpeg'></div><br>Age of Conflict</button></div>
-<div class="content-item" data-category="category50"><button onclick="dice()"><div class="div1"><img src='img/dice.jpeg'></div><br>Idle Dice</button></div>
-<div class="content-item" data-category="category51"><button onclick="evo()"><div class="div1"><img src='img/evo.png'></div><br>Evolution</button></div>
-<div class="content-item" data-category="category52"><button onclick="achl()"><div class="div1"><img src='img/achl.png'></div><br>Little Alchemy</button></div>
-<div class="content-item" data-category="category53"><button onclick="thecube()"><div class="div1"><img src='img/thecube.png'></div><br>The Cube</button></div>
-<div class="content-item" data-category="category54"><button onclick="btbf()"><div class="div1"><img src='img/mrmine.jpeg'></div><br>Mr.Mine</button></div>
-<div class="content-item" data-category="category55"><button onclick="onone()"><div class="div1"><img src='img/1on1.jpeg'></div><br>1on1 Soccer</button></div>
-<div class="content-item" data-category="category56"><button onclick="fruit()"><div class="div1"><img src='img/fruit.jpg'></div><br>Fruit Ninja</button></div>
-<div class="content-item" data-category="category57"><button onclick="burrito()"><div class="div1"><img src='img/burrito.jpeg'></div><br>Burrito Bison</button></div>
-<div class="content-item" data-category="category58"><button onclick="moto()"><div class="div1"><img src='img/moto.jpg'></div><br>Moto X3M</button></div>
-<div class="content-item" data-category="category59"><button onclick="moto2()"><div class="div1"><img src='img/moto2.jpeg'></div><br>Moto X3M 2</button></div>
-<div class="content-item" data-category="category60"><button onclick="moto4()"><div class="div1"><img src='img/moto4.jpeg'></div><br>Moto X3M Winter</button></div>
-<div class="content-item" data-category="category61"><button onclick="moto5()"><div class="div1"><img src='img/moto5.jpg'></div><br>Moto X3M Pool Party</button></div>
-<div class="content-item" data-category="category62"><button onclick="moto6()"><div class="div1"><img src='img/moto6.jpeg'></div><br>Moto X3M Spooky Land</button></div>
-<div class="content-item" data-category="category63"><button onclick="jack()"><div class="div1"><img src='img/jack.jpeg'></div><br>Jack Smith</button></div>
-<div class="content-item" data-category="category64"><button onclick="riddleone()"><div class="div1"><img src='img/riddle1.jpeg'></div><br>Riddle School 1</button></div>
-<div class="content-item" data-category="category65"><button onclick="riddletwo()"><div class="div1"><img src='img/riddle2.jpeg'></div><br>Riddle School 2</button></div>
-<div class="content-item" data-category="category66"><button onclick="riddlethree()"><div class="div1"><img src='img/riddle3.jpeg'></div><br>Riddle School 3</button></div>
-<div class="content-item" data-category="category67"><button onclick="riddlefour()"><div class="div1"><img src='img/riddle4.jpeg'></div><br>Riddle School 4</button></div>
-<div class="content-item" data-category="category68"><button onclick="riddlefive()"><div class="div1"><img src='img/riddle5.jpeg'></div><br>Riddle School 5</button></div>
-<div class="content-item" data-category="category69"><button onclick="riddletran()"><div class="div1"><img src='img/riddletran.jpeg'></div><br>Riddle Transfer 1 </button></div>
-<div class="content-item" data-category="category70"><button onclick="riddletran2()"><div class="div1"><img src='img/riddletran2.jpeg'></div><br>Riddle Transfer 2</button></div>
-<div class="content-item" data-category="category71"><button onclick="raft1()"><div class="div1"><img src='img/raft1.jpeg'></div><br>Raft Wars</button></div>
-<div class="content-item" data-category="category72"><button onclick="raft2()"><div class="div1"><img src='img/raft2.jpeg'></div><br>Raft Wars2</button></div>
-<div class="content-item" data-category="category73"><button onclick="bloon1()"><div class="div1"><img src='img/bloon1.jpeg'></div><br>Bloon 1</button></div>
-<div class="content-item" data-category="category74"><button onclick="bloon2()"><div class="div1"><img src='img/bloon2.jpeg'></div><br>Bloon 2</button></div>
-<div class="content-item" data-category="category75"><button onclick="bloon3()"><div class="div1"><img src='img/bloon3.jpeg'></div><br>Bloon 3</button></div>
-<div class="content-item" data-category="category76"><button onclick="gun1()"><div class="div1"><img src='img/gun1.jpeg'></div><br>Gun Mayhem</button></div>
-<div class="content-item" data-category="category77"><button onclick="gun2()"><div class="div1"><img src='img/gun2.jpeg'></div><br>Gun Mayhem 2</button></div>
-<div class="content-item" data-category="category78"><button onclick="gun3()"><div class="div1"><img src='img/gun3.jpeg'></div><br>Gun Mayhem 3</button></div>
-<div class="content-item" data-category="category79"><button onclick="worlds1()"><div class="div1"><img src='img/worlds1.png'></div><br>World's Hardest Game</button></div>
-<div class="content-item" data-category="category80"><button onclick="worlds2()"><div class="div1"><img src='img/worlds2.jpeg'></div><br>World's Hardest Game 2</button></div>
-<div class="content-item" data-category="category81"><button onclick="worlds3()"><div class="div1"><img src='img/worlds3.jpeg'></div><br>World's Hardest Game 3</button></div>
-<div class="content-item" data-category="category82"><button onclick="worlds4()"><div class="div1"><img src='img/worlds4.jpeg'></div><br>World's Hardest Game 4</button></div>
-<div class="content-item" data-category="category83"><button onclick="road1()"><div class="div1"><img src='img/road1.webp'></div><br>Road Of The Dead</button></div>
-<div class="content-item" data-category="category84"><button onclick="road2()"><div class="div1"><img src='img/road2.jpeg'></div><br>Road Of The Dead 2</button></div>
-<div class="content-item" data-category="category85"><button onclick="learnf1()"><div class="div1"><img src='img/learnf1.jpeg'></div><br>Learn To Fly 1</button></div>
-<div class="content-item" data-category="category86"><button onclick="learnf2()"><div class="div1"><img src='img/learnf2.jpeg'></div><br>Learn To Fly 2</button></div>
-<div class="content-item" data-category="category87"><button onclick="learnf3()"><div class="div1"><img src='img/learnf3.jpeg'></div><br>Learn To Fly 3</button></div>
-<div class="content-item" data-category="category88"><button onclick="age1()"><div class="div1"><img src='img/age1.jpeg'></div><br>Age Of War 1</button></div>
-<div class="content-item" data-category="category89"><button onclick="age2()"><div class="div1"><img src='img/age2.jpeg'></div><br>Age Of War 2</button></div>
-<div class="content-item" data-category="category90"><button onclick="twilv()"><div class="div1"><img src='img/2048.png'></div><br>2048</button></div>
-<div class="content-item" data-category="category91"><button onclick="fire1()"><div class="div1"><img src='img/fire1.jpeg'></div><br>Fire Boy And Water Girl 1</button></div>
-<div class="content-item" data-category="category92"><button onclick="dub2()"><div class="div1"><img src='img/dub2.jpeg'></div><br>Douchebag Workout 2</button></div>
-<div class="content-item" data-category="category93"><button onclick="pap1()"><div class="div1"><img src='img/pap1.jpeg'></div><br>Papa Louie:1</button></div>
-<div class="content-item" data-category="category94"><button onclick="pap2()"><div class="div1"><img src='img/paps2.jpeg'></div><br>Papa Louie:2</button></div>
-<div class="content-item" data-category="category95"><button onclick="pap3()"><div class="div1"><img src='img/paps3.jpeg'></div><br>Papa Louie:3</button></div>
-<div class="content-item" data-category="category96"><button onclick="tinyfish()"><div class="div1"><img src='img/tiny-fishing.png'></div><br>Tiny Fishing</button></div>
-<div class="content-item" data-category="category97"><button onclick="pokemonred()"><div class="div1"><img src='img/pokemon-red.webp'></div><br>Pokemon Red</button></div>
-<div class="content-item" data-category="category98"><button onclick="pokemonblue()"><div class="div1"><img src='img/pokemon-blue.webp'></div><br>Pokemon Blue</button></div>
-<div class="content-item" data-category="category99"><button onclick="pokemonyellow()"><div class="div1"><img src='img/pokemon-yellow.webp'></div><br>Pokemon Yellow</button></div>
-<div class="content-item" data-category="category100"><button onclick="btbf()"><div class="div1"><img src='img/fifa.webp'></div><br>FIFA 2007 </button></div>
-<div class="content-item" data-category="category101"><button onclick="doom()"><div class="div1"><img src='img/doom.webp'></div><br>Doom </button></div>
-<div class="content-item" data-category="category102"><button onclick="mariob()"><div class="div1"><img src='img/mariob.webp'></div><br>Mario</button></div>
-<div class="content-item" data-category="category103"><button onclick="miniput1()"><div class="div1"><img src='img/minip1.webp'></div><br>Mini Put1</button></div>
-<div class="content-item" data-category="category104"><button onclick="miniput3()"><div class="div1"><img src='img/minip3.jpeg'></div><br>Mini Put 3</button></div>
-<div class="content-item" data-category="category105"><button onclick="bowman1()"><div class="div1"><img src='img/bowman.jpeg'></div><br>BowMan</button></div>
-<div class="content-item" data-category="category106"><button onclick="bowman2()"><div class="div1"><img src='img/bowman2.png'></div><br>BowMan 2</button></div>
 
-<div class="content-item" data-category="category107"><button onclick="gunb()"><div class="div1"><img src='img/gunb.jpeg'></div><br>gun blood</button></div>
-<div class="content-item" data-category="category108"><button onclick="curveb()"><div class="div1"><img src='img/curveb.jpeg'></div><br>curveball</button></div>
-<div class="content-item" data-category="category109"><button onclick="apples()"><div class="div1"><img src='img/apples.jpeg'></div><br>Apple Shooter</button></div>
-<div class="content-item" data-category="category110"><button onclick="tk1()"><div class="div1"><img src='img/tkh.jpeg'></div><br>Tank War</button></div>
-<div class="content-item" data-category="category111"><button onclick="rk1()"><div class="div1"><img src='img/2318.jpg'></div><br>Ricochet Kills</button></div>
-<div class="content-item" data-category="category112"><button onclick="rk2()"><div class="div1"><img src='img/2317.jpg'></div><br>Ricochet Kills 2</button></div>
-<div class="content-item" data-category="category113"><button onclick="rk3()"><div class="div1"><img src='img/2327.jpg'></div><br>Ricochet Kills 3</button></div>
-<div class="content-item" data-category="category114"><button onclick="rk4()"><div class="div1"><img src='img/2328.jpg'></div><br>Ricochet Kills 4 </button></div>
-<div class="content-item" data-category="category115"><button onclick="rk5()"><div class="div1"><img src='img/2323.gif'></div><br>Ricochet Kills 1: <br>Player Pack</button></div>
-<div class="content-item" data-category="category116"><button onclick="rk6()"><div class="div1"><img src='img/2326.jpg'></div><br>Ricochet Kills 2: <br>Player Pack</button></div>
-<div class="content-item" data-category="category117"><button onclick="rk7()"><div class="div1"><img src='img/2337.jpg'></div><br>Ricochet Kills 3: <br>Player Pack</button></div>
-<div class="content-item" data-category="category118"><button onclick="clickerh()"><div class="div1"><img src='img/soon.png'></div><br>Clicker Heroes</button></div>
+		<div id="content">
+			<div class="content-item" data-category="category1">
+				<button onclick="oneto()"><div class="div1"><img src='img/form.png'></div><br>Request A Game</button>
+			</div>
+			<div class="content-item" data-category="category2">
+				<button onclick="min()"><div class="div1"><img src='img/mine.jpeg'></div><br>Minecraft</button></div>
+			<div class="content-item" data-category="category3">
+				<button onclick="flappy()"><div class="div1"><img src='img/flappy.jpeg'></div><br>Flappy bird</button>
+			</div>
+			<div class="content-item" data-category="category4">
+				<button onclick="retro()"><div class="div1"><img src='img/retro.png'></div><br>Retro bowl</button></div>
+			<div class="content-item" data-category="category5">
+				<button onclick="openg('https://raw.githubusercontent.com/troycla/drag-racing-v3-flash-emulor-ruffle/main/dragracing.swf')"><div class="div1"><img src='img/dragv3.jpeg'></div><br>Drag race v3</button>
+			</div>
+			<div class="content-item" data-category="category6">
+				<button onclick="openg('https://cdn.jsdelivr.net/gh/Games-From-Flash/swf/Checkers.swf')"><div class="div1"><img src='img/checkers.jpeg'></div><br>Checkers</button>
+			</div>
+			<div class="content-item" data-category="category7">
+				<button onclick="openg('https://cdn.jsdelivr.net/gh/Games-From-Flash/swf/Tetris.swf')"><div class="div1"><img src='img/tetris.jpeg'></div><br>Tetris</button></div>
+			<div class="content-item" data-category="category8">
+				<button onclick=""><div class="div1"><img src='img/buddy.jpeg'></div><br>Interactive buddy</button>
+			</div>
+			<div class="content-item" data-category="category9">
+				<button onclick="portal()"><div class="div1"><img src='img/portal.jpeg'></div><br>Portal</button></div>
+			<div class="content-item" data-category="category10">
+				<button onclick="pacin()"><div class="div1"><img src='img/pacin.png'></div><br>Pacman</button></div>
+			<div class="content-item" data-category="category11">
+				<button onclick="duck1()"><div class="div1"><img src='img/duck.jpeg'></div><br>Duck life</button></div>
+			<div class="content-item" data-category="category12">
+				<button onclick="duck2()"><div class="div1"><img src='img/duck2.jpeg'></div><br>Duck Life 2</button>
+			</div>
+			<div class="content-item" data-category="category13">
+				<button onclick="duck3()"><div class="div1"><img src='img/duck3.jpeg'></div><br>Duck Life 3</button>
+			</div>
+			<div class="content-item" data-category="category14">
+				<button onclick="duck4()"><div class="div1"><img src='img/duck4.jpeg'></div><br>Duck Life 4</button>
+			</div>
+			<div class="content-item" data-category="category15">
+				<button onclick="cookies()"><div class="div1"><img src='img/cookie.jpeg'></div><br>Cookie Clicker</button>
+			</div>
+			<div class="content-item" data-category="category16">
+				<button onclick="bitcoin()"><div class="div1"><img src='img/bitcoin.png'></div><br>Idle Bit Coin</button>
+			</div>
+			<div class="content-item" data-category="category17">
+				<button onclick="tiq()"><div class="div1"><img src='img/impose.png'></div><br>The Impossible Quiz</button>
+			</div>
+			<div class="content-item" data-category="category18">
+				<button onclick="dj()"><div class="div1"><img src='img/doddle.jpeg'></div><br>Doodle Jump</button></div>
+			<div class="content-item" data-category="category19">
+				<button onclick="happywheel()"><div class="div1"><img src='img/wheels.jpeg'></div><br>Happy Wheel's</button>
+			</div>
+			<div class="content-item" data-category="category20">
+				<button onclick="pclicker()"><div class="div1"><img src='img/pc.jpeg'></div><br>Particle Clicker</button>
+			</div>
+			<div class="content-item" data-category="category21">
+				<button onclick="ib()"><div class="div1"><img src='img/ib.png'></div><br>Idle Break Out</button></div>
+			<div class="content-item" data-category="category22">
+				<button onclick="p2()"><div class="div1"><img src='img/io2.jpeg'></div><br>Paper.io 2</button></div>
+			<div class="content-item" data-category="category23">
+				<button onclick="sh()"><div class="div1"><img src='img/superhot.jpeg'></div><br>Super Hot</button></div>
+			<div class="content-item" data-category="category24">
+				<button onclick="bs()"><div class="div1"><img src='img/bs.jpeg'></div><br>Basket Ball Star's</button>
+			</div>
+			<div class="content-item" data-category="category25">
+				<button onclick="geo()"><div class="div1"><img src='img/geo.jpeg'></div><br>Geo Dash</button></div>
+			<div class="content-item" data-category="category26">
+				<button onclick="slope()"><div class="div1"><img src='img/slope.png'></div><br>Slope</button></div>
+			<div class="content-item" data-category="category27">
+				<button onclick="rs()"><div class="div1"><img src='img/roofe.jpeg'></div><br>Rooftop Snipers</button>
+			</div>
+			<div class="content-item" data-category="category28">
+				<button onclick="sk()"><div class="div1"><img src='img/smash.jpeg'></div><br>Smash Kart</button></div>
+			<div class="content-item" data-category="category29">
+				<button onclick="lol()"><div class="div1"><img src='img/1v1.jpeg'></div><br>1v1.lol</button></div>
+			<div class="content-item" data-category="category30">
+				<button onclick="sm64()"><div class="div1"><img src='img/64.jpeg'></div><br>Super Mario 64</button>
+			</div>
+			<div class="content-item" data-category="category31">
+				<button onclick="tr()"><div class="div1"><img src='img/tunnel.jpeg'></div><br>Tunnel Rush</button></div>
+			<div class="content-item" data-category="category32">
+				<button onclick="bl()"><div class="div1"><img src='img/bitlife.jpeg'></div><br>Bit Life</button></div>
+			<div class="content-item" data-category="category33">
+				<button onclick="bb()"><div class="div1"><img src='img/bb1.jpeg'></div><br>Basket Bros</button></div>
+			<div class="content-item" data-category="category34">
+				<button onclick="dh()"><div class="div1"><img src='img/drift2.jpeg'></div><br>Drift Hunters</button>
+			</div>
+			<div class="content-item" data-category="category35">
+				<button onclick="cr()"><div class="div1"><img src='img/ctr.png'></div><br>Cross The Road</button></div>
+			<div class="content-item" data-category="category36">
+				<button onclick="perc()"><div class="div1"><img src='img/pc12.jpeg'></div><br>Perfect Circle</button>
+			</div>
+			<div class="content-item" data-category="category37">
+				<button onclick="fn()"><div class="div1"><img src='img/frying1.jpeg'></div><br>Frying Nemo</button>
+			</div>
+			<div class="content-item" data-category="category38">
+				<button onclick="ss()"><div class="div1"><img src='img/subs.jpeg'></div><br>Subway Surfers</button>
+			</div>
+			<div class="content-item" data-category="category39">
+				<button onclick="msc2()"><div class="div1"><img src='img/msc2.jpeg'></div><br>Madalin Stunt Cars 2</button>
+			</div>
+			<div class="content-item" data-category="category40">
+				<button onclick="msc3()"><div class="div1"><img src='img/msc3.jpeg'></div><br>Madalin Stunt Cars 3</button>
+			</div>
+			<div class="content-item" data-category="category41">
+				<button onclick="raze1()"><div class="div1"><img src='img/raze1.jpeg'></div><br>Raze 1</button></div>
+			<div class="content-item" data-category="category42">
+				<button onclick="raze2()"><div class="div1"><img src='img/raze2.jpeg'></div><br>Raze 2</button></div>
+			<div class="content-item" data-category="category43">
+				<button onclick="raze3()"><div class="div1"><img src='img/raze3.jpeg'></div><br>Raze 3</button></div>
+			<div class="content-item" data-category="category44">
+				<button onclick="cr2()"><div class="div1"><img src='img/cluster.jpeg'></div><br>Cluster Rush</button>
+			</div>
+			<div class="content-item" data-category="category45">
+				<button onclick="scrapm()"><div class="div1"><img src='img/scrap.jpeg'></div><br>Scrap Metal</button>
+			</div>
+			<div class="content-item" data-category="category46">
+				<button onclick="warfare1917()"><div class="div1"><img src='img/w1.jpeg'></div><br>Warfare 1917</button>
+			</div>
+			<div class="content-item" data-category="category47">
+				<button onclick="warfare1944()"><div class="div1"><img src='img/w2.jpeg'></div><br>Warfare 1944</button>
+			</div>
+			<div class="content-item" data-category="category48">
+				<button onclick="run2()"><div class="div1"><img src='img/r2.jpeg'></div><br>Run 2</button></div>
+			<div class="content-item" data-category="category49">
+				<button onclick="agc()"><div class="div1"><img src='img/agc.jpeg'></div><br>Age of Conflict</button>
+			</div>
+			<div class="content-item" data-category="category50">
+				<button onclick="dice()"><div class="div1"><img src='img/dice.jpeg'></div><br>Idle Dice</button></div>
+			<div class="content-item" data-category="category51">
+				<button onclick="evo()"><div class="div1"><img src='img/evo.png'></div><br>Evolution</button></div>
+			<div class="content-item" data-category="category52">
+				<button onclick="achl()"><div class="div1"><img src='img/achl.png'></div><br>Little Alchemy</button>
+			</div>
+			<div class="content-item" data-category="category53">
+				<button onclick="thecube()"><div class="div1"><img src='img/thecube.png'></div><br>The Cube</button>
+			</div>
+			<div class="content-item" data-category="category54">
+				<button onclick="btbf()"><div class="div1"><img src='img/mrmine.jpeg'></div><br>Mr.Mine</button></div>
+			<div class="content-item" data-category="category55">
+				<button onclick="onone()"><div class="div1"><img src='img/1on1.jpeg'></div><br>1on1 Soccer</button>
+			</div>
+			<div class="content-item" data-category="category56">
+				<button onclick="fruit()"><div class="div1"><img src='img/fruit.jpg'></div><br>Fruit Ninja</button>
+			</div>
+			<div class="content-item" data-category="category57">
+				<button onclick="burrito()"><div class="div1"><img src='img/burrito.jpeg'></div><br>Burrito Bison</button>
+			</div>
+			<div class="content-item" data-category="category58">
+				<button onclick="moto()"><div class="div1"><img src='img/moto.jpg'></div><br>Moto X3M</button></div>
+			<div class="content-item" data-category="category59">
+				<button onclick="moto2()"><div class="div1"><img src='img/moto2.jpeg'></div><br>Moto X3M 2</button>
+			</div>
+			<div class="content-item" data-category="category60">
+				<button onclick="moto4()"><div class="div1"><img src='img/moto4.jpeg'></div><br>Moto X3M Winter</button>
+			</div>
+			<div class="content-item" data-category="category61">
+				<button onclick="moto5()"><div class="div1"><img src='img/moto5.jpg'></div><br>Moto X3M Pool Party</button>
+			</div>
+			<div class="content-item" data-category="category62">
+				<button onclick="moto6()"><div class="div1"><img src='img/moto6.jpeg'></div><br>Moto X3M Spooky Land</button>
+			</div>
+			<div class="content-item" data-category="category63">
+				<button onclick="jack()"><div class="div1"><img src='img/jack.jpeg'></div><br>Jack Smith</button></div>
+			<div class="content-item" data-category="category64">
+				<button onclick="riddleone()"><div class="div1"><img src='img/riddle1.jpeg'></div><br>Riddle School 1</button>
+			</div>
+			<div class="content-item" data-category="category65">
+				<button onclick="riddletwo()"><div class="div1"><img src='img/riddle2.jpeg'></div><br>Riddle School 2</button>
+			</div>
+			<div class="content-item" data-category="category66">
+				<button onclick="riddlethree()"><div class="div1"><img src='img/riddle3.jpeg'></div><br>Riddle School 3</button>
+			</div>
+			<div class="content-item" data-category="category67">
+				<button onclick="riddlefour()"><div class="div1"><img src='img/riddle4.jpeg'></div><br>Riddle School 4</button>
+			</div>
+			<div class="content-item" data-category="category68">
+				<button onclick="riddlefive()"><div class="div1"><img src='img/riddle5.jpeg'></div><br>Riddle School 5</button>
+			</div>
+			<div class="content-item" data-category="category69">
+				<button onclick="riddletran()"><div class="div1"><img src='img/riddletran.jpeg'></div><br>Riddle Transfer 1 </button>
+			</div>
+			<div class="content-item" data-category="category70">
+				<button onclick="riddletran2()"><div class="div1"><img src='img/riddletran2.jpeg'></div><br>Riddle Transfer 2</button>
+			</div>
+			<div class="content-item" data-category="category71">
+				<button onclick="raft1()"><div class="div1"><img src='img/raft1.jpeg'></div><br>Raft Wars</button></div>
+			<div class="content-item" data-category="category72">
+				<button onclick="raft2()"><div class="div1"><img src='img/raft2.jpeg'></div><br>Raft Wars2</button>
+			</div>
+			<div class="content-item" data-category="category73">
+				<button onclick="bloon1()"><div class="div1"><img src='img/bloon1.jpeg'></div><br>Bloon 1</button></div>
+			<div class="content-item" data-category="category74">
+				<button onclick="bloon2()"><div class="div1"><img src='img/bloon2.jpeg'></div><br>Bloon 2</button></div>
+			<div class="content-item" data-category="category75">
+				<button onclick="bloon3()"><div class="div1"><img src='img/bloon3.jpeg'></div><br>Bloon 3</button></div>
+			<div class="content-item" data-category="category76">
+				<button onclick="gun1()"><div class="div1"><img src='img/gun1.jpeg'></div><br>Gun Mayhem</button></div>
+			<div class="content-item" data-category="category77">
+				<button onclick="gun2()"><div class="div1"><img src='img/gun2.jpeg'></div><br>Gun Mayhem 2</button>
+			</div>
+			<div class="content-item" data-category="category78">
+				<button onclick="gun3()"><div class="div1"><img src='img/gun3.jpeg'></div><br>Gun Mayhem 3</button>
+			</div>
+			<div class="content-item" data-category="category79">
+				<button onclick="worlds1()"><div class="div1"><img src='img/worlds1.png'></div><br>World's Hardest Game</button>
+			</div>
+			<div class="content-item" data-category="category80">
+				<button onclick="worlds2()"><div class="div1"><img src='img/worlds2.jpeg'></div><br>World's Hardest Game 2</button>
+			</div>
+			<div class="content-item" data-category="category81">
+				<button onclick="worlds3()"><div class="div1"><img src='img/worlds3.jpeg'></div><br>World's Hardest Game 3</button>
+			</div>
+			<div class="content-item" data-category="category82">
+				<button onclick="worlds4()"><div class="div1"><img src='img/worlds4.jpeg'></div><br>World's Hardest Game 4</button>
+			</div>
+			<div class="content-item" data-category="category83">
+				<button onclick="road1()"><div class="div1"><img src='img/road1.webp'></div><br>Road Of The Dead</button>
+			</div>
+			<div class="content-item" data-category="category84">
+				<button onclick="road2()"><div class="div1"><img src='img/road2.jpeg'></div><br>Road Of The Dead 2</button>
+			</div>
+			<div class="content-item" data-category="category85">
+				<button onclick="learnf1()"><div class="div1"><img src='img/learnf1.jpeg'></div><br>Learn To Fly 1</button>
+			</div>
+			<div class="content-item" data-category="category86">
+				<button onclick="learnf2()"><div class="div1"><img src='img/learnf2.jpeg'></div><br>Learn To Fly 2</button>
+			</div>
+			<div class="content-item" data-category="category87">
+				<button onclick="learnf3()"><div class="div1"><img src='img/learnf3.jpeg'></div><br>Learn To Fly 3</button>
+			</div>
+			<div class="content-item" data-category="category88">
+				<button onclick="age1()"><div class="div1"><img src='img/age1.jpeg'></div><br>Age Of War 1</button>
+			</div>
+			<div class="content-item" data-category="category89">
+				<button onclick="age2()"><div class="div1"><img src='img/age2.jpeg'></div><br>Age Of War 2</button>
+			</div>
+			<div class="content-item" data-category="category90">
+				<button onclick="twilv()"><div class="div1"><img src='img/2048.png'></div><br>2048</button></div>
+			<div class="content-item" data-category="category91">
+				<button onclick="fire1()"><div class="div1"><img src='img/fire1.jpeg'></div><br>Fire Boy And Water Girl 1</button>
+			</div>
+			<div class="content-item" data-category="category92">
+				<button onclick="dub2()"><div class="div1"><img src='img/dub2.jpeg'></div><br>Douchebag Workout 2</button>
+			</div>
+			<div class="content-item" data-category="category93">
+				<button onclick="pap1()"><div class="div1"><img src='img/pap1.jpeg'></div><br>Papa Louie:1</button>
+			</div>
+			<div class="content-item" data-category="category94">
+				<button onclick="pap2()"><div class="div1"><img src='img/paps2.jpeg'></div><br>Papa Louie:2</button>
+			</div>
+			<div class="content-item" data-category="category95">
+				<button onclick="pap3()"><div class="div1"><img src='img/paps3.jpeg'></div><br>Papa Louie:3</button>
+			</div>
+			<div class="content-item" data-category="category96">
+				<button onclick="tinyfish()"><div class="div1"><img src='img/tiny-fishing.png'></div><br>Tiny Fishing</button>
+			</div>
+			<div class="content-item" data-category="category97">
+				<button onclick="pokemonred()"><div class="div1"><img src='img/pokemon-red.webp'></div><br>Pokemon Red</button>
+			</div>
+			<div class="content-item" data-category="category98">
+				<button onclick="pokemonblue()"><div class="div1"><img src='img/pokemon-blue.webp'></div><br>Pokemon Blue</button>
+			</div>
+			<div class="content-item" data-category="category99">
+				<button onclick="pokemonyellow()"><div class="div1"><img src='img/pokemon-yellow.webp'></div><br>Pokemon Yellow</button>
+			</div>
+			<div class="content-item" data-category="category100">
+				<button onclick="btbf()"><div class="div1"><img src='img/fifa.webp'></div><br>FIFA 2007 </button></div>
+			<div class="content-item" data-category="category101">
+				<button onclick="doom()"><div class="div1"><img src='img/doom.webp'></div><br>Doom </button></div>
+			<div class="content-item" data-category="category102">
+				<button onclick="mariob()"><div class="div1"><img src='img/mariob.webp'></div><br>Mario</button></div>
+			<div class="content-item" data-category="category103">
+				<button onclick="miniput1()"><div class="div1"><img src='img/minip1.webp'></div><br>Mini Put1</button>
+			</div>
+			<div class="content-item" data-category="category104">
+				<button onclick="miniput3()"><div class="div1"><img src='img/minip3.jpeg'></div><br>Mini Put 3</button>
+			</div>
+			<div class="content-item" data-category="category105">
+				<button onclick="bowman1()"><div class="div1"><img src='img/bowman.jpeg'></div><br>BowMan</button></div>
+			<div class="content-item" data-category="category106">
+				<button onclick="bowman2()"><div class="div1"><img src='img/bowman2.png'></div><br>BowMan 2</button>
+			</div>
 
-<div class="content-item" data-category="category119"><button onclick="ngon()"><div class="div1"><img src='img/soon.png'></div><br>n-gon</button></div>
-    
-  </div>
-  <button class='bb1' onclick="history.back()">Back</button>
-  <script>
-        function openGamePage(gameFile) {
+			<div class="content-item" data-category="category107">
+				<button onclick="gunb()"><div class="div1"><img src='img/gunb.jpeg'></div><br>gun blood</button></div>
+			<div class="content-item" data-category="category108">
+				<button onclick="curveb()"><div class="div1"><img src='img/curveb.jpeg'></div><br>curveball</button>
+			</div>
+			<div class="content-item" data-category="category109">
+				<button onclick="apples()"><div class="div1"><img src='img/apples.jpeg'></div><br>Apple Shooter</button>
+			</div>
+			<div class="content-item" data-category="category110">
+				<button onclick="tk1()"><div class="div1"><img src='img/tkh.jpeg'></div><br>Tank War</button></div>
+			<div class="content-item" data-category="category111">
+				<button onclick="rk1()"><div class="div1"><img src='img/2318.jpg'></div><br>Ricochet Kills</button>
+			</div>
+			<div class="content-item" data-category="category112">
+				<button onclick="rk2()"><div class="div1"><img src='img/2317.jpg'></div><br>Ricochet Kills 2</button>
+			</div>
+			<div class="content-item" data-category="category113">
+				<button onclick="rk3()"><div class="div1"><img src='img/2327.jpg'></div><br>Ricochet Kills 3</button>
+			</div>
+			<div class="content-item" data-category="category114">
+				<button onclick="rk4()"><div class="div1"><img src='img/2328.jpg'></div><br>Ricochet Kills 4 </button>
+			</div>
+			<div class="content-item" data-category="category115">
+				<button onclick="rk5()"><div class="div1"><img src='img/2323.gif'></div><br>Ricochet Kills 1: <br>Player Pack</button>
+			</div>
+			<div class="content-item" data-category="category116">
+				<button onclick="rk6()"><div class="div1"><img src='img/2326.jpg'></div><br>Ricochet Kills 2: <br>Player Pack</button>
+			</div>
+			<div class="content-item" data-category="category117">
+				<button onclick="rk7()"><div class="div1"><img src='img/2337.jpg'></div><br>Ricochet Kills 3: <br>Player Pack</button>
+			</div>
+			<div class="content-item" data-category="category118">
+				<button onclick="clickerh()"><div class="div1"><img src='img/soon.png'></div><br>Clicker Heroes</button>
+			</div>
+
+			<div class="content-item" data-category="category119">
+				<button onclick="ngon()"><div class="div1"><img src='img/soon.png'></div><br>n-gon</button></div>
+
+		</div>
+        <div class="content-item" data-category="category120">
+            <button onclick="gamee('emu/index.html?core=mgba&rom=https://raw.githubusercontent.com/BobzGames/GBA/main/gh-pages/Binaries/dbz_supersonic.gba')"><div class="div1"><img src='img/soon.png'></div><br>Dragon Ball Z - Supersonic Warriors</button>
+        </div>
+    </div>
+   
+		<button class='bb1' onclick="history.back()">Back</button>
+		<script>
+			function openg(gameFile) {
             window.location.href = 'Flash.html?game=' + gameFile;
+        }
+        function opene(eFile) {
+            window.location.href = 'emulator.html?game=' + eFile;
         }
 
 
-  </script>
-  
-  <script>
-        function searchPage() {
+		</script>
+
+		<script>
+			function searchPage() {
       var input, filter, content, items, i;
       input = document.getElementById('searchBar');
       filter = input.value.toLowerCase();
@@ -293,12 +500,12 @@ border: 3px solid red;
         }
       }
     }
-  </script>
-  <script src='js/search.js'>
-    
-  </script>
-  <script>
-    function clickerh(){
+		</script>
+		<script src='js/search.js'>
+
+		</script>
+		<script>
+			function clickerh(){
       window.location.href = ('../game-a2/clicker-heroes-main/index.html');
     }
     function ngon(){
@@ -341,9 +548,9 @@ border: 3px solid red;
     }
     
     
-  </script>
-  <script>
-    function pokemonred(){
+		</script>
+		<script>
+			function pokemonred(){
       window.location.href = ('pokemonred.html');
     }
     function pokemonblue(){
@@ -369,9 +576,9 @@ border: 3px solid red;
       window.location.href = ('mariob.html');
     }
 
-  </script>
-<script>
-function soon(){
+		</script>
+		<script>
+			function soon(){
   alert("This Will Be Added Soon!");
 }
 function nsam(){
@@ -741,7 +948,8 @@ function tinyfish(){
  function bowman2(){
    window.location.href = ('bowman2.html');
  }
-</script>
+		</script>
 
 </body>
+
 </html>
