@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin X | flash page</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<style>
+		body {
+			background: #090909;
+		}
+
+		#fps {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			font: bold;
+			font-size: 20px;
+			color: red;
+			background-color: black;
+			padding: 5px 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+			box-shadow: 1px 2px 10px 1px black;
+		}
+
+		.embed {
+			border: 1px solid red;
+			border-radius: 3px;
+			box-shadow: 1px 2px 10px 1px black;
+		}
+
+		embed {
+			border-radius: 5px;
+			box-shadow: 1px 2px 10px 1px black;
+		}
+
+		button {
+			background: black;
+			border: 3px solid red;
+			border-radius: 6px;
+			box-shadow: 1px 2px 10px 1px black;
+		}
+
+		font {
+			visibility: hidden;
+		}
+
+		.material-icons {
+			border: 1px solid black;
+			border-radius: 5px;
+			font-size: 24px;
+			color: red;
+			box-shadow: 1px 2px 10px 1px black;
+		}
+	</style>
+	<script>
+		var lastCalledTime;
+    var fps;
+
+    function updateFPS() {
+        if (!lastCalledTime) {
+            lastCalledTime = Date.now();
+            fps = 0;
+            return;
+        }
+        var delta = (Date.now() - lastCalledTime) / 1000;
+        lastCalledTime = Date.now();
+        fps = 1 / delta;
+
+        document.getElementById('fpsCount').textContent = fps.toFixed(1);
+        requestAnimationFrame(updateFPS);
+    }
+
+    updateFPS();
+	</script>
+
+	<script>
+		function tf() {
+        var embed = document.getElementById('embeddedHTML');
+        if (!document.fullscreenElement) {
+            embed.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    }
+	</script>
+	<div id="fps">FPS: <span id="fpsCount">0</span></div><br><br><br>
+	<div id="flash-container"></div>
+	<br><br>
+	
+	<script>
+		function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    const gameFile = getQueryParam('game');
+    if (gameFile) {
+        const embedElement = document.createElement('embed');
+        embedElement.id ='embeddedHTML';
+        embedElement.src = gameFile;
+        embedElement.className = 'embed';
+        flash-container.appendChild(embeddedElement);
+   
+    } else {
+        flashContainer.innerHTML = 'No game selected.';
+    }
+	</script>
+	<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+	<script src="js/dev-console.js"></script>
+</body>
+
+</html>
