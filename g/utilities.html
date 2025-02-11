@@ -6,108 +6,74 @@
   
 <body bgcolor="black">
 <style>
-   body {
-background: #090909;
-}
+   
+    body {
+      background: #090909;
+    }
 
-img {
+    img {
       border:2px soild #201F1F;
-border-radius: 10px;
-width: 180px;
-height: 120px;
-}
+      border-radius: 10px;
+      width: 180px;
+      height: 120px;
+    }
 
-img:hover {
-border-radius: 10px;
-width: 180px;
-height: 120px;
+    img:hover {
 
-}
+      border-radius: 10px;
+      width: 180px;
+      height: 120px;
+
+    }
 
 
-.bb1 {
-border: 2px solid red;
-border-radius: 3px;
-background: #090909;
-color: red;
-transition: 1s;
-}
+    .bb1 {
+      border: 2px solid red;
+      border-radius: 3px;
+      background: #090909;
+      color: red;
+      transition: 1s;
+    }
 
-.bb1:hover {
-border: 2px solid black;
-border-radius: 3px;
-background: red;
-color: black;
-transition: 1s;
-}
-/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
-/** {
-  scrollbar-width: thin;
-  scrollbar-color: #FF0000 #DFE9EB;
-}*/
+    .bb1:hover {
+      border: 2px solid black;
+      border-radius: 3px;
+      background: red;
+      color: black;
+      transition: 1s;
+    }
 
-/* Chrome, Edge and Safari */
-*::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
-}
-*::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #DFE9EB;
-}
+    .div1 {
 
-*::-webkit-scrollbar-track:hover {
-  background-color: #B8C0C2;
-}
+      border-radius: 10px;
+      width: 180px;
+      height: 120px;
+    }
 
-*::-webkit-scrollbar-track:active {
-  background-color: #B8C0C2;
-}
+    .search-container {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-*::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: #FF0000;
-}
+    .search-container input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 3px solid red;
+      font-size: 16px;
+      background: black;
+      color: red;
+    }
 
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #FF0000;
-}
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-*::-webkit-scrollbar-thumb:active {
-  background-color: #000000;
-}
-
-.div1 {
-
-border-radius: 10px;
-width: 180px;
-height: 120px;
-}
-
-.search-container {
-text-align: center;
-margin-bottom: 10px;
-}
-
-.search-container input[type="text"] {
-padding: 10px;
-width: 300px;
-border-radius: 5px;
-border: 3px solid red;
-font-size: 16px;
-background: black;
-color: red;
-}
-
-#content {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.content-item {
-margin: 5px;
-}
+    .content-item {
+      margin: 5px;
+    }
 
 
 
@@ -126,17 +92,17 @@ transition: 1s;
 
 .content-item:hover button {
 box-shadow: 1px 2px 10px 2px black;
+box-shadow:inset 1px 2px 10px 2px red;
 padding: 10px 20px;
 margin: 9px;
 border-radius: 10px;
 font-size: 16px;
-color: black;
-background-color: #600C0C;
+color: red;
+font-shadow:red;
+background-color: black;
 border: 3px solid red;
 
 }
-
-
   </style>
   <div class="search-container">
     <input class="shb." type="text" id="searchBar" placeholder="Search..." onkeyup="searchPage()">
