@@ -1,5 +1,5 @@
 javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();
- 
+javascript:(()=>{(function() %7B%0A    const meta %3D document.createElement('meta')%3B%0A    meta.httpEquiv %3D 'Content-Security-Policy'%3B%0A    meta.content %3D "default-src 'unsafe-eval' data%3A blob%3A%3B"%3B%0A    document.head.appendChild(meta)%3B%0A    %2F* stop open connections. In Firefox%2C this will also close many web sockets *%2F%0A    window.stop()%3B%0A%7D)()%3B})()
 
 alert('this new gui is in testesting this just a test to see how it works with the other things');
 
